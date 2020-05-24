@@ -23,6 +23,10 @@ const pageImages = [
         url: 'https://images.unsplash.com/photo-1506452305024-9d3f02d1c9b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
         color: "darkgreen"//"rgb(40,52,41)"
     },
+    {
+        url: 'https://images.unsplash.com/photo-1533792658684-4c83f4825a61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+        color: "black"
+    },
 ]
 
 const pageImage = pageImages[Math.floor(Math.random() * pageImages.length)]
@@ -33,7 +37,7 @@ const ClickBox = styled.a`
     color: ${Theme.color};
     font-size: 1.7rem;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 2s;
     z-index: 10;
     background-color: white;
     :hover {

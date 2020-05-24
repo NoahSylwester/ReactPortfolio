@@ -8,6 +8,10 @@ export default function About(props) {
             <Navbar />
             <div style={styles.pageBody}>
                 <h1>About</h1>
+                <p>
+                    Blurb about me
+                    It's a me!
+                </p>
             </div>
         </div>
     )
@@ -19,6 +23,10 @@ const styles = {
         height: "100%",
     },
     pageBody: {
-        padding: 100
+        padding: 100,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center"
     }
 }

@@ -7,15 +7,19 @@ const NavLink = styled.a`
     transition: 0.2s;
     padding: 10px;
     :hover {
-        background-color: blue;
+        background-color: rgba(245,245,245,1);
+        box-shadow: inset 0px 2px 2px lightgrey;
     }
 `;
 
 const NavBrand = styled.a`
     position: absolute;
     left: 0;
+    top: 0;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
+    margin: 2px;
+    border: 1px black solid;
 `;
 
 export default function Navbar(props) {

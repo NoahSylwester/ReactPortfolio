@@ -5,9 +5,9 @@ export default function About(props) {
 
     return (
         <div style={styles.page}>
-            <Navbar />
+            <Navbar About />
             <div style={styles.pageBody}>
-                <h1>About</h1>
+                <img style={styles.img} src="https://noahsylwester.github.io/Portfolio/assets/images/profile_pic%20copy.jpg"></img>
                 <p>
                     Blurb about me
                     It's a me!
@@ -28,5 +28,9 @@ const styles = {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center"
+    },
+    img: {
+        height: "200px",
+        width: "200px"
     }
 }

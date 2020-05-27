@@ -1,14 +1,16 @@
 [
     {
-        "title": "First project",
+        "title": "StoryBoard",
         "description": "I made this as a test item for this portfolio",
         "source": "url",
-        "live": "url"
+        "live": "url",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/splash.png"
     },
     {
-        "title": "Second project",
+        "title": "StumpAround",
         "description": "I made this as a test item for this portfolio",
         "source": "url",
-        "live": "url"
+        "live": "url",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%20stumparound.png"
     }
 ]

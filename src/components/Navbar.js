@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const NavLink = styled.a`
     text-decoration: none;
-    color: red;
+    color: black;
     transition: 0.2s;
     padding: 10px;
     :hover {
@@ -24,11 +24,13 @@ const NavBrand = styled.a`
 
 export default function Navbar(props) {
 
+    const { About, Portfolio } = props;
+
     return (
         <nav style={styles.navbar}>
-            <NavBrand href="/">Noah Sylwester</NavBrand>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/portfolio">Portfolio</NavLink>
+            {/* <NavBrand href="/">Noah Sylwester</NavBrand> */}
+            <NavLink style={About ? styles.selected : {}} href="/about">About</NavLink>
+            <NavLink style={Portfolio ? styles.selected : {}} href="/portfolio">Portfolio</NavLink>
         </nav>
     )
 }
@@ -43,5 +45,9 @@ const styles = {
         flexDirection: "row",
         justifyContent: "space-around",
         alignItems: "center"
+    },
+    selected: {
+        backgroundColor: "rgba(245,245,245,1)",
+        boxShadow: "inset 0px 2px 2px lightgrey"
     }
 }

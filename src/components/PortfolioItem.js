@@ -31,7 +31,7 @@ const Banner = styled.div`
         margin: 10px;
     }
     a {
-        color: darkturquoise !important;
+        color: red !important;
         text-decoration: none;
         margin: 2px;
         padding: 5px;

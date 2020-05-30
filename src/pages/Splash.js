@@ -62,7 +62,7 @@ export default function Splash(props) {
         <div style={styles.splash}>
             <Reveal className="reveal">
                 <h1>Noah Sylwester</h1>
-                <h1>// web developer</h1>
+                <h1>web developer</h1>
                 <h2>(click to enter)</h2>
             </Reveal>
             <ClickBox href="/about">
@@ -80,7 +80,9 @@ const styles = {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: `url(${pageImage.url})`,
+        backgroundColor: "lightskyblue",
+        boxShadow: "inset 0px -200px 1000px rgba(256,256,256,0.6)",
+        // backgroundImage: `url(${pageImage.url})`,
         backgroundSize: 'cover',
         zIndex: '-20'
     },

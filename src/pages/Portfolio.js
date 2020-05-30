@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from "../components/Navbar";
 import portfolioItems from '../portfolio-items.json';
 import PortfolioItem from '../components/PortfolioItem';
+import PortfolioItemThumbnails from '../components/PortfolioItemThumbnails';
 import styled from 'styled-components';
 
 const Arrow = styled.div`
@@ -25,6 +26,7 @@ const Arrow = styled.div`
     }
 `
 
+
 export default function Portfolio(props) {
 
     const [index, setIndex] = useState(0);
@@ -44,14 +46,14 @@ export default function Portfolio(props) {
     }
 
     return (
-        <div>
+        <div style={styles.page}>
             <Navbar Portfolio />
             <div style={styles.pageBody}>
                 <Arrow onClick={() => handleArrowClick('back')}>←</Arrow>
                 <PortfolioItem item={portfolioItems[index]} />
                 <Arrow onClick={() => handleArrowClick('forward')}>→</Arrow>
-                {/* {portfolioItems.map(item => <PortfolioItem item={item} />)} */}
             </div>
+            <PortfolioItemThumbnails items={portfolioItems} currentIndex={index} changeIndex={(index) => setIndex(index)} />
         </div>
     )
 }
@@ -59,10 +61,10 @@ export default function Portfolio(props) {
 const styles = {
     page: {
         backgroundColor: 'white',
-        height: "100%",
+        height: '100%',
     },
     pageBody: {
-        padding: 100,
+        padding: "100px 100px 0px 100px",
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",

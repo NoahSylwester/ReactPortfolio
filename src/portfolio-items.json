@@ -1,16 +1,73 @@
 [
     {
         "title": "StoryBoard",
-        "description": "I made this as a test item for this portfolio",
-        "source": "url",
-        "live": "url",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/splash.png"
+        "description": "A user-secured React app built with mongoDB for sharing and discussing stories",
+        "source": "https://github.com/NoahSylwester/Lore",
+        "live": "https://storyboard-online.herokuapp.com/",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/splash.png",
+        "bannerRGBA": "rgba(256,256,256,0.9)"
     },
     {
         "title": "StumpAround",
-        "description": "I made this as a test item for this portfolio",
-        "source": "url",
-        "live": "url",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%20stumparound.png"
+        "description": "A React Native mobile app for PNW hikers and explorers",
+        "source": "https://github.com/NoahSylwester/StumpAroundClient",
+        "live": "https://expo.io/@noahsylwester/StumpAround",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%20stumparound.png",
+        "bannerRGBA": "rgba(256,256,256,0.9)"
+    },
+    {
+        "title": "Monster News",
+        "description": "A news aggregator for monster stories built using cheerio.js",
+        "source": "https://github.com/NoahSylwester/NewsScraper",
+        "live": "https://monster-news.herokuapp.com/",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_11_20_2019_6-02-19%20PM.png",
+        "bannerRGBA": "rgba(256,256,256,0.8)"
+    },
+    {
+        "title": "Image Clicker",
+        "description": "A React memory game that scales in difficulty as you play",
+        "source": "https://github.com/NoahSylwester/Image_Clicker",
+        "live": "https://noahsylwester.github.io/Image_Clicker",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/FireShot%20Capture%20001%20-%20Image%20Clicker%20-%20noahsylwester.github.io.png",
+        "bannerRGBA": "rgba(256,256,256,0.8)"
+    },
+    {
+        "title": "Monstrous",
+        "description": "A fullstack dating app for monsters built with express.js ",
+        "source": "https://github.com/NoahSylwester/FriendFinder",
+        "live": "https://monstrous.herokuapp.com/",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_10_10_2019_10-56-06%20PM.png",
+        "bannerRGBA": "rgba(256,256,256,0.8)"
+    },
+    {
+        "title": "RPS Online",
+        "description": "High stakes online Rock-Paper-Scissors with live chat built with FireBase. Beat your friends!",
+        "source": "https://github.com/NoahSylwester/RPS-Multiplayer",
+        "live": "https://noahsylwester.github.io/RPS-Multiplayer",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_9_17_2019_5-57-35%20PM.png",
+        "bannerRGBA": "rgba(256,256,256,0.8)"
+    },
+    {
+        "title": "Cattle vs Mechs",
+        "description": "An epic RPG. Which side will you choose?",
+        "source": "https://github.com/NoahSylwester/unit-4-game",
+        "live": "https://noahsylwester.github.io/unit-4-game",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_9_17_2019_5-57-10%20PM.png",
+        "bannerRGBA": "rgba(256,256,256,0.8)"
+    },
+    {
+        "title": "Bamazon Storefront",
+        "description": "A command line tool to manipulate a storefront's SQL database",
+        "source": "https://github.com/noahsylwester/bamazon",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%202019-10-01%20at%208.06.16%20PM.png",
+        "bannerRGBA": "rgba(256,256,256,0.8)"
+    },
+    {
+        "title": "Squirrel Defense",
+        "description": "A silly scratch game. Nothing complicated, just for fun",
+        "source": "https://scratch.mit.edu/projects/317874867/editor/",
+        "live": "https://scratch.mit.edu/projects/317874867/",
+        "image": "https://cdn2.scratch.mit.edu/get_image/project/317874867_480x360.png",
+        "bannerRGBA": "rgba(256,256,256,0.8)"
     }
 ]

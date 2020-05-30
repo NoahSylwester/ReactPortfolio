@@ -25,7 +25,7 @@ const ThumbnailContainer = styled.div`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 60%;
     margin: 15px auto;
 `
 

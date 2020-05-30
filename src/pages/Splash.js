@@ -8,6 +8,12 @@ const pageImage = {
 }
 
 const ClickBox = styled.a`
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     padding: 22px;
     box-shadow: 1px 3px 5px grey;
@@ -57,7 +63,7 @@ export default function Splash(props) {
             <Reveal className="reveal">
                 <h1>Noah Sylwester</h1>
                 <h1>// web developer</h1>
-                <h2>( click )</h2>
+                <h2>(click to enter)</h2>
             </Reveal>
             <ClickBox href="/about">
                 hover

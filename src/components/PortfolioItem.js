@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from "styled-components";
 
 const PortfolioItemWrapper = styled.div`
@@ -31,7 +31,7 @@ const Banner = styled.div`
         margin: 10px;
     }
     a {
-        color: blue !important;
+        color: darkturquoise !important;
         text-decoration: none;
         margin: 2px;
         padding: 5px;
@@ -48,14 +48,31 @@ const Banner = styled.div`
 export default function PortfolioItem(props) {
 
     const { title, description, source, live, image, bannerRGBA } = props.item;
+    const { index, setIndex, length } = props.indexer;
+
+    const changeIndex = (event) => {
+        switch (event.key) {
+            case "ArrowRight":
+                return setIndex(index + 1 <= length - 1 ? index + 1 : 0);
+            case "ArrowLeft":
+                return setIndex(index - 1 >= 0 ? index - 1 : length - 1);
+            default:
+                return;
+        }
+    }
+    
+    useEffect(() => {
+        document.addEventListener('keyup', changeIndex);
+        return () => document.removeEventListener('keyup', changeIndex)
+    }, [index])
 
     return (
         <PortfolioItemWrapper item={{ image, bannerRGBA }}>
             <Banner item={{ image, bannerRGBA }}>
                 <h1>{title}</h1>
-                <p>{description}</p>
+                <p style={{ padding: "0 20px" }}>{description}</p>
                 <div style={{ display: "flex", flexDirection: "row"}}>
-                    <a target="_blank" href={source}>Source Code</a>
+                    <a target="_blank" href={source}>Source</a>
                     {live ? <a target="_blank" href={live}>See it live</a> : <div />}
                 </div>
             </Banner>

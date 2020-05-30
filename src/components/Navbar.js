@@ -6,6 +6,12 @@ const NavLink = styled.a`
     color: black;
     transition: 0.2s;
     padding: 10px;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     :hover {
         background-color: rgba(245,245,245,1);
         box-shadow: inset 0px 2px 2px lightgrey;

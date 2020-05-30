@@ -50,7 +50,7 @@ export default function Portfolio(props) {
             <Navbar Portfolio />
             <div style={styles.pageBody}>
                 <Arrow onClick={() => handleArrowClick('back')}>←</Arrow>
-                <PortfolioItem item={portfolioItems[index]} />
+                <PortfolioItem indexer={{ index, setIndex, length: portfolioItems.length }} item={portfolioItems[index]} />
                 <Arrow onClick={() => handleArrowClick('forward')}>→</Arrow>
             </div>
             <PortfolioItemThumbnails items={portfolioItems} currentIndex={index} changeIndex={(index) => setIndex(index)} />

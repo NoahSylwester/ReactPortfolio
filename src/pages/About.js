@@ -43,7 +43,6 @@ const styles = {
         height: "200px",
         width: "200px",
         borderRadius: "100px",
-        border: "2px solid rgba(240,240,240,1)"
     },
     proficiencies: {
         width: "70%",

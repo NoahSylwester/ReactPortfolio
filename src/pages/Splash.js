@@ -37,7 +37,7 @@ const ClickBox = styled.a`
 `
 
 const Reveal = styled.div`
-    color: ${pageImage.color}};
+    color: ${pageImage.color};
     display: flex;
     flex-direction: column;
     justify-content: center;

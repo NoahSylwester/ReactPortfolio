@@ -16,6 +16,10 @@ const NavLink = styled.a`
         background-color: rgba(245,245,245,1);
         box-shadow: inset 0px 2px 2px lightgrey;
     }
+    :active {
+        background-color: rgba(240,240,240,1);
+        box-shadow: inset 0px 2px 4px darkgrey;
+    }
 `;
 
 const NavBrand = styled.a`

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "GitHub",
+        "link": "https://github.com/NoahSylwester",
+        "iconPath": "github-icon.png"
+    },
+    {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/noah-sylwester-8536b6141/",
+        "iconPath": "linkedin-icon.png"
+    },
+    {
+        "name": "Resume",
+        "link": "https://noahsylwester.github.io/Portfolio/SylwesterResume.pdf",
+        "iconPath": "resume-icon.png"
+    },
+    {
+        "name": "Email",
+        "link": "mailto:noahsylwester@gmail.com",
+        "iconPath": "email-icon.png"
+    }
+]

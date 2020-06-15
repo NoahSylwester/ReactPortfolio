@@ -1,16 +1,25 @@
 import React from 'react';
 import Navbar from "../components/Navbar";
+import ContactDashboard from '../components/ContactDashboard';
+import { useMediaQuery } from 'react-responsive'
 
 export default function About() {
+
+    const isDesktop = useMediaQuery({
+        query: '(min-width: 755px)'
+      })
+
+    const styles = isDesktop ? stylesDesktop : stylesMobile;
 
     return (
         <div style={styles.page}>
             <Navbar About />
             <div style={styles.pageBody}>
                 <img style={styles.img} src="https://noahsylwester.github.io/Portfolio/assets/images/profile_pic%20copy.jpg"></img>
+                <ContactDashboard />
                 <p style={styles.proficiencies}>
                     Proficient in <br />
-                    <strong>React, React Native, Javascript, Node, HTML5, CSS3, SQL, NoSQL, REST, Python, R</strong>
+                    <strong>React, React Native, Angular, Javascript, Node, HTML5, CSS3, SQL, NoSQL, REST, Python, R</strong>
                 </p>
                 <p style={styles.description}>
                     Fullstack web developer with a background in applied physics powering my problem-solving skills. Recently
@@ -28,31 +37,62 @@ export default function About() {
     )
 }
 
-const styles = {
+const stylesDesktop = {
     page: {
         backgroundColor: 'white',
         height: "100%",
     },
     pageBody: {
-        padding: 100,
+        padding: "100px 100px 100px 120px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center"
     },
     img: {
-        height: "200px",
-        width: "200px",
-        borderRadius: "100px",
+        height: "300px",
+        width: "300px",
+        borderRadius: "200px",
+        boxShadow: "0 1px 7px lightgrey"
     },
     proficiencies: {
         width: "70%",
         padding: 20,
+        paddingTop: 0,
         textAlign: "center"
     },
     description: {
         width: "80%",
         paddingLeft: 10,
         borderLeft: "1px solid lightgrey"
-    }
+    },
+}
+const stylesMobile = {
+    page: {
+        backgroundColor: 'white',
+        height: "100%",
+    },
+    pageBody: {
+        padding: "100px 40px 100px 50px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    img: {
+        height: "250px",
+        width: "250px",
+        borderRadius: "200px",
+    },
+    proficiencies: {
+        width: "70%",
+        padding: 20,
+        paddingTop: 0,
+        textAlign: "center"
+    },
+    description: {
+        width: "100%",
+        paddingLeft: 10,
+        borderLeft: "1px solid lightgrey"
+    },
 }

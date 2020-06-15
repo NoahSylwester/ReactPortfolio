@@ -1,13 +1,19 @@
 import React from 'react';
 import Theme from '../theme.json';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { fadeInDownBig } from 'react-animations';
 
 const pageImage = {
     url: 'https://images.unsplash.com/photo-1490598000245-075175152d25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
     color: "lemonchiffon"
 }
 
+const bounceAnimation = keyframes`${fadeInDownBig}`;
+// animation: 3s ${bounceAnimation};
+
+
 const ClickBox = styled.a`
+    animation: 3s ${bounceAnimation};
     width: 100px;
     height: 100px;
     border-radius: 100px;

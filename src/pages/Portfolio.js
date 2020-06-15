@@ -4,6 +4,7 @@ import portfolioItems from '../portfolio-items.json';
 import PortfolioItem from '../components/PortfolioItem';
 import PortfolioItemThumbnails from '../components/PortfolioItemThumbnails';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 const Arrow = styled.div`
     cursor: pointer;
@@ -30,6 +31,9 @@ const Arrow = styled.div`
 export default function Portfolio(props) {
 
     const [index, setIndex] = useState(0);
+    const isDesktop = useMediaQuery({
+        query: '(min-width: 755px)'
+      })
 
     const handleArrowClick = (type) => {
         switch (type) {
@@ -48,12 +52,28 @@ export default function Portfolio(props) {
     return (
         <div style={styles.page}>
             <Navbar Portfolio />
-            <div style={styles.pageBody}>
-                <Arrow onClick={() => handleArrowClick('back')}>←</Arrow>
-                <PortfolioItem indexer={{ index, setIndex, length: portfolioItems.length }} item={portfolioItems[index]} />
-                <Arrow onClick={() => handleArrowClick('forward')}>→</Arrow>
+            <div style={isDesktop ? styles.pageBodyDesktop : styles.pageBodyMobile}>
+                {
+                isDesktop
+                    ?
+                <>
+                    <Arrow onClick={() => handleArrowClick('back')}>←</Arrow>
+                    <PortfolioItem indexer={{ index, setIndex, length: portfolioItems.length }} item={portfolioItems[index]} />
+                    <Arrow onClick={() => handleArrowClick('forward')}>→</Arrow>
+                </>
+                    :
+                <>
+                    {portfolioItems.map((item, i) => <PortfolioItem mobile indexer={{ index, setIndex, length: portfolioItems.length }} item={item} />)}
+                </>
+                }
             </div>
-            <PortfolioItemThumbnails items={portfolioItems} currentIndex={index} changeIndex={(index) => setIndex(index)} />
+            {
+                isDesktop
+                ?
+                <PortfolioItemThumbnails items={portfolioItems} currentIndex={index} changeIndex={(index) => setIndex(index)} />
+                :
+                <></>
+            }
         </div>
     )
 }
@@ -63,10 +83,17 @@ const styles = {
         backgroundColor: 'white',
         height: '100%',
     },
-    pageBody: {
+    pageBodyDesktop: {
         padding: "100px 100px 0px 100px",
         display: "flex",
         flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    pageBodyMobile: {
+        padding: "100px 20px 0px 20px",
+        display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center"
     },

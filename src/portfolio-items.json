@@ -1,7 +1,7 @@
 [
     {
         "title": "StoryBoard",
-        "description": "A user-secured React app built with mongoDB for sharing and discussing stories",
+        "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing stories",
         "source": "https://github.com/NoahSylwester/Lore",
         "live": "https://storyboard-online.herokuapp.com/",
         "image": "https://noahsylwester.github.io/Portfolio/assets/images/splash.png",
@@ -13,6 +13,14 @@
         "source": "https://github.com/NoahSylwester/StumpAroundClient",
         "live": "https://expo.io/@noahsylwester/StumpAround",
         "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%20stumparound.png",
+        "bannerRGBA": "rgba(256,256,256,0.9)"
+    },
+    {
+        "title": "COVID19 Stats Tracker",
+        "description": "An app to track COVID19 data made with Angular and D3",
+        "source": "https://github.com/NoahSylwester/COVID19Stats",
+        "live": "https://covidstattracker.herokuapp.com/",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/COVID19Stats/master/screenshot.png",
         "bannerRGBA": "rgba(256,256,256,0.9)"
     },
     {

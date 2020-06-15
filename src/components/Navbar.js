@@ -19,18 +19,35 @@ const NavLink = styled.div`
     }
     :active {
         background-color: rgba(240,240,240,1);
-        box-shadow: inset 0px 2px 4px darkgrey;
+        box-shadow: inset 0px 1px 4px darkgrey;
     }
 `;
 
 const NavBrand = styled.a`
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
     position: absolute;
     left: 0;
     top: 0;
     text-decoration: none;
     padding: 15px;
-    margin: 2px;
-    border: 1px black solid;
+    margin: 20px;
+    box-shadow: 0px 1px 2px lightgrey; 
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    :hover {
+        background-color: rgba(245,245,245,1);
+        box-shadow: inset 0px 1px 1px lightgrey;
+    }
+    :active {
+        background-color: rgba(240,240,240,1);
+        box-shadow: inset 0px 1px 3px darkgrey;
+    }
 `;
 
 export default function Navbar(props) {
@@ -39,7 +56,10 @@ export default function Navbar(props) {
 
     return (
         <nav style={styles.navbar}>
-            {/* <NavBrand href="/">Noah Sylwester</NavBrand> */}
+            <NavBrand href="/">
+                <div>Noah</div>
+                <div>Sylwester</div>
+            </NavBrand>
             <Link style={About ? styles.selected : styles.unselected} to="/about">
                 <NavLink style={styles.link}>About</NavLink>
             </Link>

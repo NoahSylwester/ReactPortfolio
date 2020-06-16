@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import ContactDashboard from '../components/ContactDashboard';
 import styled from 'styled-components';
 import proficiencies from '../proficiencies.json';
+import bio from '../bio.json';
 import { useMediaQuery } from 'react-responsive'
 
 export default function About() {
@@ -23,29 +24,23 @@ export default function About() {
             <div style={styles.pageBody}>
                 <img style={styles.img} src="https://noahsylwester.github.io/Portfolio/assets/images/profile_pic%20copy.jpg"></img>
                 <ContactDashboard />
-                <p style={styles.proficiencies}>
-                    <p>Proficient in</p>
+                <div style={styles.proficiencies}>
+                    <p style={{ marginBottom: 10 }}>Proficient in</p>
                     <strong>
-                        {proficiencies.map((item) => {
+                        {proficiencies.map((item, i) => {
                             return (
-                            <>
+                            <React.Fragment key={item.icon + i}>
                                 {item.icon ? <img src={item.icon} style={{height: "1rem", width: "1rem"}}/> : <></>}
-                                <Proficiency color={item.color}> {item.technology} · </Proficiency>
-                            </>
+                                <Proficiency color={item.color}> {item.technology}{i !== proficiencies.length - 1 ? <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span> : ""}</Proficiency>
+                            </React.Fragment>
                             )
                         })}
                     </strong>
-                </p>
+                </div>
                 <p style={styles.description}>
-                    Fullstack web developer with a background in applied physics powering my problem-solving skills. Recently
-                    earned a certificate in Full Stack Development from the University of Oregon, with proficiency in JavaScript,
-                    HTML5, CSS, and React. Known for being easy to work with, and for my driving work ethic and innovative
-                    problem-solving abilities. With each project, my aim is to best engage my audience for an impactful
-                    user experience.
+                    {bio.paragraphs[0]}
                     <br /><br />
-                    I recently led a team of four in agile development style to develop a full stack React Native app that
-                    provides a social media platform for PNW hikers and explorers. Looking forward to contributing in the future
-                    as part of a hard-working, quality-obsessed team to build a better user experience.
+                    {bio.paragraphs[1]}
                 </p>
             </div>
         </div>

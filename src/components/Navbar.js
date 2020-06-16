@@ -14,8 +14,8 @@ const NavLink = styled.div`
     justify-content: center;
     align-items: center;
     :hover {
-        background-color: rgba(245,245,245,1);
-        box-shadow: inset 0px 2px 2px lightgrey;
+        background-color: rgba(250,250,250,1);
+        box-shadow: inset 0px 1px 2px lightgrey;
     }
     :active {
         background-color: rgba(240,240,240,1);

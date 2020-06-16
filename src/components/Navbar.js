@@ -24,8 +24,10 @@ const NavLink = styled.div`
 `;
 
 const NavBrand = styled.a`
+    background-color: rgba(256,256,256,0.4);
     color: black;
     display: flex;
+    transition: 0.2s;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -35,7 +37,7 @@ const NavBrand = styled.a`
     top: 0;
     text-decoration: none;
     padding: 15px;
-    margin: 20px;
+    margin: 10px;
     box-shadow: 0px 1px 2px lightgrey; 
     width: 30px;
     height: 30px;

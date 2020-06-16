@@ -20,27 +20,35 @@ const ClickBox = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: absolute;
     padding: 22px;
-    box-shadow: 1px 3px 5px grey;
     color: ${Theme.color};
     font-size: 2rem;
     text-decoration: none;
-    transition: 2s;
+    transition: 0.2s;
     z-index: 10;
     background-color: white;
+    box-shadow: 1px 2px 5px lightgrey;
     :hover {
-        box-shadow: none !important;
-        background-color: rgba(256,256,256,0);
-        color: rgba(0,0,0,0);
+        box-shadow: 0px 1px 2px lightgrey;
     }
-    :hover + .overlay {
-        background-color: rgba(256,256,256,0);
-    }
-    :hover ~ .reveal {
-        color: ${pageImage.color};
+    :active {
+        box-shadow: inset 1px 1px 4px lightgrey;
     }
 `
+// :hover {
+//     box-shadow: none !important;
+//     background-color: rgba(256,256,256,0);
+//     color: rgba(0,0,0,0);
+// }
+    // :hover + .overlay {
+    //     background-color: rgba(256,256,256,0);
+    // }
+    // :hover ~ .reveal {
+    //     color: ${pageImage.color};
+    // }
+// `
 
 const Reveal = styled.div`
     color: ${pageImage.color};
@@ -72,7 +80,7 @@ export default function Splash(props) {
                 <h2>(click to enter)</h2>
             </Reveal>
             <ClickBox href="/about">
-                hover
+                click
             </ClickBox>
             <OverLay className="overlay" />
         </div>
@@ -86,9 +94,9 @@ const styles = {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "lightskyblue",
+        // backgroundColor: "lightskyblue",
         boxShadow: "inset 0px -200px 1000px rgba(256,256,256,0.6)",
-        // backgroundImage: `url(${pageImage.url})`,
+        backgroundImage: `url(${pageImage.url})`,
         backgroundSize: 'cover',
         zIndex: '-20'
     },

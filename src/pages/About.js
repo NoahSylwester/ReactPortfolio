@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from "../components/Navbar";
 import ContactDashboard from '../components/ContactDashboard';
+import styled from 'styled-components';
+import proficiencies from '../proficiencies.json';
 import { useMediaQuery } from 'react-responsive'
 
 export default function About() {
@@ -11,6 +13,10 @@ export default function About() {
 
     const styles = isDesktop ? stylesDesktop : stylesMobile;
 
+    const Proficiency = styled.span`
+      color: ${props => props.color};
+    `
+
     return (
         <div style={styles.page}>
             <Navbar About />
@@ -18,8 +24,17 @@ export default function About() {
                 <img style={styles.img} src="https://noahsylwester.github.io/Portfolio/assets/images/profile_pic%20copy.jpg"></img>
                 <ContactDashboard />
                 <p style={styles.proficiencies}>
-                    Proficient in <br />
-                    <strong>React, React Native, Angular, Javascript, Node, HTML5, CSS3, SQL, NoSQL, REST, Python, R</strong>
+                    <p>Proficient in</p>
+                    <strong>
+                        {proficiencies.map((item) => {
+                            return (
+                            <>
+                                {item.icon ? <img src={item.icon} style={{height: "1rem", width: "1rem"}}/> : <></>}
+                                <Proficiency color={item.color}> {item.technology} · </Proficiency>
+                            </>
+                            )
+                        })}
+                    </strong>
                 </p>
                 <p style={styles.description}>
                     Fullstack web developer with a background in applied physics powering my problem-solving skills. Recently
@@ -50,6 +65,7 @@ const stylesDesktop = {
         alignItems: "center"
     },
     img: {
+        marginLeft: "1px",
         height: "300px",
         width: "300px",
         borderRadius: "200px",
@@ -80,6 +96,7 @@ const stylesMobile = {
         alignItems: "center"
     },
     img: {
+        marginLeft: "8px",
         height: "250px",
         width: "250px",
         borderRadius: "200px",

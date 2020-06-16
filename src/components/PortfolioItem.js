@@ -49,7 +49,7 @@ const Banner = styled.div`
 export default function PortfolioItem(props) {
 
     const { title, description, source, live, image, bannerRGBA } = props.item;
-    const { index, setIndex, length } = props.indexer;
+    const { index, setIndex, length } = props.indexer || { index: null, setIndex: null, length: null };
 
     const changeIndex = (event) => {
         switch (event.key) {

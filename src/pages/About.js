@@ -11,6 +11,9 @@ export default function About() {
     const isDesktop = useMediaQuery({
         query: '(min-width: 755px)'
       })
+    const isSmallScreen = !useMediaQuery({
+        query: '(min-width: 430px)'
+      })
 
     const styles = isDesktop ? stylesDesktop : stylesMobile;
 
@@ -27,14 +30,32 @@ export default function About() {
                 <div style={styles.proficiencies}>
                     <p style={{ marginBottom: 10 }}>Proficient in</p>
                     <strong>
-                        {proficiencies.map((item, i) => {
+                        {
+                        isDesktop
+                        ?
+                        // desktop view
+                        proficiencies.map((item, i) => {
                             return (
                             <React.Fragment key={item.icon + i}>
                                 {item.icon ? <img src={item.icon} style={{height: "1rem", width: "1rem"}}/> : <></>}
-                                <Proficiency color={item.color}> {item.technology}{i !== proficiencies.length - 1 ? <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span> : ""}</Proficiency>
+                                <Proficiency color={item.color}>{item.technology}{i !== proficiencies.length - 1 ? <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span> : ""}</Proficiency>
                             </React.Fragment>
                             )
-                        })}
+                        })
+                        :
+                        // mobile view
+                        <div style={styles.proficienciesGrid}>
+                            {proficiencies.map((item, i) => {
+                                return (
+                                <div key={item.icon + i} style={{ paddingLeft: isSmallScreen ? "0" : "20%", whiteSpace: "nowrap" }}>
+                                    {item.icon ? <img src={item.icon} style={{height: "1rem", width: "1rem"}}/> : <></>}
+                                    <Proficiency color={item.color}>{item.technology}</Proficiency>
+                                </div>
+                                )
+                            })}
+                        </div>
+                        }
+
                     </strong>
                 </div>
                 <p style={styles.description}>
@@ -97,10 +118,16 @@ const stylesMobile = {
         borderRadius: "200px",
     },
     proficiencies: {
-        width: "70%",
+        width: "80%",
         padding: 20,
         paddingTop: 0,
         textAlign: "center"
+    },
+    proficienciesGrid: { 
+        display: "grid",
+        gridTemplateColumns: "auto auto",
+        gridAutoRows: "30px",
+        justifyItems: "left"
     },
     description: {
         width: "100%",

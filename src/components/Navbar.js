@@ -1,6 +1,18 @@
 import React from 'react';
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive'
+
+const NavbarStyled = styled.nav`
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: ${props => props.isNotSmallScreen ? "space-around" : "center"};
+    align-items: center;
+`
 
 const NavLink = styled.div`
     text-decoration: none;
@@ -56,46 +68,62 @@ export default function Navbar(props) {
 
     const { About, Portfolio } = props;
 
+    const isNotSmallScreen = useMediaQuery({
+        query: '(min-width: 500px)'
+    })
+
+    const styles = isNotSmallScreen ? stylesDesktop : stylesMobile;
+
     return (
-        <nav style={styles.navbar}>
+        <NavbarStyled isNotSmallScreen={isNotSmallScreen}>
             <NavBrand href="/">
                 <div>Noah</div>
                 <div>Sylwester</div>
             </NavBrand>
-            <Link style={About ? styles.selected : styles.unselected} to="/about">
-                <NavLink style={styles.link}>About</NavLink>
+            <Link style={{ ...styles.navlink, ...(About ? styles.selected : styles.unselected)}} to="/about">
+                <NavLink isNotSmallScreen={isNotSmallScreen} style={styles.link}>About</NavLink>
             </Link>
-            <Link style={Portfolio ? styles.selected : styles.unselected} to="/portfolio">
-                <NavLink style={styles.link}>Portfolio</NavLink>
+            <Link style={{ ...styles.navlink, ...(Portfolio ? styles.selected : styles.unselected)}} to="/portfolio">
+                <NavLink isNotSmallScreen={isNotSmallScreen} style={styles.link}>Portfolio</NavLink>
             </Link>
-        </nav>
+        </NavbarStyled>
     )
 }
 
-const styles = {
-    navbar: {
-        padding: 10,
-        position: "fixed",
-        top: 0,
-        width: "100%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center"
-    },
+const stylesDesktop = {
     link: {
         textDecoration: "none",
         color: "black",
     },
-    selected: {
+    navlink: {
         textDecoration: 'none',
         borderRadius: "50px",
+    },
+    selected: {
         backgroundColor: "rgba(245,245,245,1)",
         boxShadow: "inset 0px 1px 2px lightgrey"
     },
     unselected: {
+        backgroundColor: "rgba(256,256,256,0.4)",
+        boxShadow: "0px 1px 2px lightgrey"
+    }
+}
+
+const stylesMobile = {
+    link: {
+        textDecoration: "none",
+        color: "black",
+    },
+    navlink: {
         textDecoration: 'none',
         borderRadius: "50px",
+        margin: "0px 5%",
+    },
+    selected: {
+        backgroundColor: "rgba(245,245,245,1)",
+        boxShadow: "inset 0px 1px 2px lightgrey"
+    },
+    unselected: {
         backgroundColor: "rgba(256,256,256,0.4)",
         boxShadow: "0px 1px 2px lightgrey"
     }

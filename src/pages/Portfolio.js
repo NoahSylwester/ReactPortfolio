@@ -63,7 +63,7 @@ export default function Portfolio(props) {
                 </>
                     :
                 <>
-                    {portfolioItems.map((item, i) => <PortfolioItem mobile indexer={{ index, setIndex, length: portfolioItems.length }} item={item} />)}
+                    {portfolioItems.map((item, i) => <PortfolioItem mobile key={"mobileitem" + i} item={item} />)}
                 </>
                 }
             </div>

@@ -71,10 +71,10 @@ export default function PortfolioItem(props) {
         <PortfolioItemWrapper mobile={props.mobile} item={{ image, bannerRGBA }}>
             <Banner item={{ image, bannerRGBA }}>
                 <h1 style={{textAlign: "center"}}>{title}</h1>
-                <p style={{ padding: "0 20px" }}>{description}</p>
+                <p style={{ padding: "0 20px" }}><strong>{description}</strong></p>
                 <div style={{ display: "flex", flexDirection: "row"}}>
-                    <a target="_blank" href={source}>Source</a>
-                    {live ? <a target="_blank" href={live}>See it live</a> : <div />}
+                    <a target="_blank" href={source}><strong>Source</strong></a>
+                    {live ? <a target="_blank" href={live}><strong>See it live</strong></a> : <div />}
                 </div>
             </Banner>
         </PortfolioItemWrapper>

@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Theme from '../theme.json';
 import styled, { keyframes } from 'styled-components';
-import { fadeInDownBig } from 'react-animations';
+import { fadeIn } from 'react-animations';
+import splashImage from '../splash.jpg';
 
-const pageImage = {
-    url: 'https://images.unsplash.com/photo-1490598000245-075175152d25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
-    color: "lemonchiffon"
-}
+const fadeInAnimation = keyframes`${fadeIn}`;
 
-const bounceAnimation = keyframes`${fadeInDownBig}`;
-// animation: 3s ${bounceAnimation};
+const shadowExpand = keyframes`
+    0% {
+        box-shadow: 15px 10px 10px 0px rgba(255,251,205,0);
+    }
+    100% {
+        box-shadow: 15px 10px 10px 1000px rgba(256,256,256,0.9);
+    }
+`
 
-
-const ClickBox = styled.a`
-    animation: 3s ${bounceAnimation};
+const ClickBox = styled.div`
+    animation: 3s ${fadeInAnimation};
+    letter-spacing: 5px;
+    cursor: pointer;
+    user-select: none;
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    display: flex;
+    display: ${props => props.hide ? "none" : "flex"};
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -37,52 +43,70 @@ const ClickBox = styled.a`
         box-shadow: inset 1px 1px 4px lightgrey;
     }
 `
-// :hover {
-//     box-shadow: none !important;
-//     background-color: rgba(256,256,256,0);
-//     color: rgba(0,0,0,0);
-// }
-    // :hover + .overlay {
-    //     background-color: rgba(256,256,256,0);
-    // }
-    // :hover ~ .reveal {
-    //     color: ${pageImage.color};
-    // }
-// `
 
 const Reveal = styled.div`
-    color: ${pageImage.color};
+    animation: 3s ${fadeInAnimation};
+    color: lemonchiffon;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 2s;
     font-size: 1.5rem;
+    background-image: url(${splashImage});
+    background-size: cover;
+    z-index: 0;
+    overflow: hidden;
 `
 
-const OverLay = styled.div`
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(256,256,256,1);
-    transition: 3s;
+const Billboard = styled.a`
+    user-select: none;
+    width: 60vw;
+    height: 60vw;
+    max-height: 80vh;
+    max-width: 80vh;
+    border-radius: 300px;
+    font-size: min(3vw, 4vh);
+    background-color: rgba(0,0,0,0.2);
+    border: 1px lemonchiffon solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 15px 10px 100px lemonchiffon;
+    text-decoration: none;
+    transition: 0.2s;
+    color: lemonchiffon;
+    font-weight: bold;
     z-index: 5;
+    :hover {
+        background-color: rgba(0,0,0,0.3);
+        animation: 2s ${shadowExpand};
+        box-shadow: 15px 10px 10px 1000px rgba(256,256,256,0.9);
+    }
+    :active {
+        background-color: rgba(0,0,0,0.5);
+        box-shadow: 15px 10px 10px 1000px white;
+        border: 3px white solid;
+    }
 `
 
 export default function Splash(props) {
 
     return (
         <div style={styles.splash}>
-            <Reveal className="reveal">
-                <h1>Noah Sylwester</h1>
-                <h1>web developer</h1>
-                <h2>(click to enter)</h2>
-            </Reveal>
-            <ClickBox href="/about">
-                click
-            </ClickBox>
-            <OverLay className="overlay" />
+            {
+            <>
+                <Reveal className="reveal">
+                    <Billboard href="/about">
+                        <h1>Noah Sylwester</h1>
+                        <h1>web developer</h1>
+                    </Billboard>
+                </Reveal>
+            </>
+            }
         </div>
     )
 }
@@ -94,10 +118,6 @@ const styles = {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        // backgroundColor: "lightskyblue",
-        boxShadow: "inset 0px -200px 1000px rgba(256,256,256,0.6)",
-        backgroundImage: `url(${pageImage.url})`,
-        backgroundSize: 'cover',
         zIndex: '-20'
     },
 }

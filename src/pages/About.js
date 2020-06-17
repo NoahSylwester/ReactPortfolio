@@ -4,7 +4,7 @@ import ContactDashboard from '../components/ContactDashboard';
 import styled from 'styled-components';
 import proficiencies from '../proficiencies.json';
 import bio from '../bio.json';
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 
 export default function About() {
 
@@ -68,6 +68,7 @@ export default function About() {
     )
 }
 
+// desktop styles
 const stylesDesktop = {
     page: {
         backgroundColor: 'white',
@@ -99,6 +100,7 @@ const stylesDesktop = {
         borderLeft: "1px solid lightgrey"
     },
 }
+// mobile styles
 const stylesMobile = {
     page: {
         backgroundColor: 'white',

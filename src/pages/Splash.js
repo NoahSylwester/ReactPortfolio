@@ -8,10 +8,12 @@ const fadeInAnimation = keyframes`${fadeIn}`;
 
 const shadowExpand = keyframes`
     0% {
-        box-shadow: 15px 10px 10px 0px rgba(255,251,205,0);
+        box-shadow: 15px 10px 100px rgba(255,251,205,0.6);
+        color: lemonchiffon;
     }
     100% {
         box-shadow: 15px 10px 10px 1000px rgba(256,256,256,0.9);
+        color: white;
     }
 `
 
@@ -83,7 +85,8 @@ const Billboard = styled.a`
     z-index: 5;
     :hover {
         background-color: rgba(0,0,0,0.3);
-        animation: 2s ${shadowExpand};
+        animation: 4s ${shadowExpand};
+        color: white;
         box-shadow: 15px 10px 10px 1000px rgba(256,256,256,0.9);
     }
     :active {

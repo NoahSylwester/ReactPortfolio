@@ -76,14 +76,14 @@ export default function Navbar(props) {
 
     return (
         <NavbarStyled isNotSmallScreen={isNotSmallScreen}>
-            <NavBrand href="/">
+            <NavBrand href={process.env.PUBLIC_URL + "/"}>
                 <div>Noah</div>
                 <div>Sylwester</div>
             </NavBrand>
-            <Link style={{ ...styles.navlink, ...(About ? styles.selected : styles.unselected)}} to="/about">
+            <Link style={{ ...styles.navlink, ...(About ? styles.selected : styles.unselected)}} to={process.env.PUBLIC_URL + "/about"}>
                 <NavLink isNotSmallScreen={isNotSmallScreen} style={styles.link}>About</NavLink>
             </Link>
-            <Link style={{ ...styles.navlink, ...(Portfolio ? styles.selected : styles.unselected)}} to="/portfolio">
+            <Link style={{ ...styles.navlink, ...(Portfolio ? styles.selected : styles.unselected)}} to={process.env.PUBLIC_URL + "/portfolio"}>
                 <NavLink isNotSmallScreen={isNotSmallScreen} style={styles.link}>Portfolio</NavLink>
             </Link>
         </NavbarStyled>

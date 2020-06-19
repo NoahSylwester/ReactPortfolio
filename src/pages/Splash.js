@@ -103,7 +103,7 @@ export default function Splash(props) {
             {
             <>
                 <Reveal className="reveal">
-                    <Billboard href="/about">
+                    <Billboard href={process.env.PUBLIC_URL + "/about"}>
                         <h1>Noah Sylwester</h1>
                         <h1>web developer</h1>
                     </Billboard>

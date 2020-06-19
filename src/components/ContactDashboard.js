@@ -19,6 +19,7 @@ const ContactIconWrapper = styled.a`
     transition: 0.3s;
     box-shadow: 0 0 3px lightgrey;
     border-radius: 50px;
+    transition: 0.2s;
     :hover {
         box-shadow: inset 0 0 1px lightgrey;
     }

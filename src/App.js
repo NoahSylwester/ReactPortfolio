@@ -17,8 +17,8 @@ export default function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Route exact path="/" component={Splash} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/portfolio" component={Portfolio} />
+        <Route exact path={process.env.PUBLIC_URL + "/about"} component={About} />
+        <Route exact path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} />
       </div>
     </Router>
   )

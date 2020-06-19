@@ -16,6 +16,7 @@ export default function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
+        {console.log(process.env.PUBLIC_URL)}
         <Route exact path="/" component={Splash} />
         <Route exact path={process.env.PUBLIC_URL + "/about"} component={About} />
         <Route exact path={process.env.PUBLIC_URL + "/portfolio"} component={Portfolio} />

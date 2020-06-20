@@ -4,7 +4,7 @@ import styled from "styled-components";
 const PortfolioItemWrapper = styled.div`
     background-color: white;
     box-shadow: 0px 1px 3px lightgrey;
-    width: ${(props) => props.mobile ? "100%" : "80%"};
+    width: ${props => props.mobile ? "100%" : "80%"};
     min-width: 200px;
     height: 400px;
     margin: 10px;

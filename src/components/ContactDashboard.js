@@ -22,9 +22,11 @@ const ContactIconWrapper = styled.a`
     transition: 0.2s;
     :hover {
         box-shadow: inset 0 0 1px lightgrey;
+        background-color: rgba(250,250,250,1)
     }
     :active {
         box-shadow: inset 0 0 5px lightgrey;
+        background-color: rgba(245,245,245,1)
     }
 `
 

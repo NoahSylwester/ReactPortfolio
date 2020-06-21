@@ -59,9 +59,14 @@ export default function About() {
                     </strong>
                 </div>
                 <p style={styles.description}>
-                    {bio.paragraphs[0]}
-                    <br /><br />
-                    {bio.paragraphs[1]}
+                    {bio.paragraphs.map((item,i) => {
+                        return (
+                        <>
+                            {item}
+                            {i !== bio.paragraphs.length -1 ? <><br /><br /></> : <></>}
+                        </>
+                        )
+                    })}
                 </p>
             </div>
         </div>

@@ -17,37 +17,8 @@ const shadowExpand = keyframes`
     }
 `
 
-const ClickBox = styled.div`
-    animation: 3s ${fadeInAnimation};
-    letter-spacing: 5px;
-    cursor: pointer;
-    user-select: none;
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    display: ${props => props.hide ? "none" : "flex"};
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    padding: 22px;
-    color: ${Theme.color};
-    font-size: 2rem;
-    text-decoration: none;
-    transition: 0.2s;
-    z-index: 10;
-    background-color: white;
-    box-shadow: 1px 2px 5px lightgrey;
-    :hover {
-        box-shadow: 0px 1px 2px lightgrey;
-    }
-    :active {
-        box-shadow: inset 1px 1px 4px lightgrey;
-    }
-`
-
 const Reveal = styled.div`
-    animation: 3s ${fadeInAnimation};
+    animation: 2s ${fadeInAnimation};
     color: lemonchiffon;
     height: 100%;
     width: 100%;

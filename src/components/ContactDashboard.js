@@ -14,6 +14,7 @@ const ContactIconWrapper = styled.a`
     height: 50px;
     width: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
@@ -37,6 +38,11 @@ const ContactIcon = styled.img`
     object-position: 0 0;
 `
 
+const ContactLabel = styled.p`
+    font-size: 0.2rem;
+    text-decoration: none;
+`
+
 export default function ContactDashboard(props) {
 
     return (
@@ -45,6 +51,7 @@ export default function ContactDashboard(props) {
                 return (
                     <ContactIconWrapper key={i} target="_blank" href={item.link}>
                         <ContactIcon src={item.iconPath} />
+                        {/* <ContactLabel>{item.name}</ContactLabel> */}
                     </ContactIconWrapper>
                     )
                 })}

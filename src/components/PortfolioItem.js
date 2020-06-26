@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+// import { fadeIn } from 'react-animations';
+
+// const fadeInAnimation = keyframes`${fadeIn}`;
 
 const PortfolioItemWrapper = styled.div`
     background-color: white;
@@ -68,6 +71,7 @@ export default function PortfolioItem(props) {
     }, [index])
 
     return (
+        <>
         <PortfolioItemWrapper mobile={props.mobile} item={{ image, bannerRGBA }}>
             <Banner item={{ image, bannerRGBA }}>
                 <h1 style={{textAlign: "center"}}>{title}</h1>
@@ -78,5 +82,7 @@ export default function PortfolioItem(props) {
                 </div>
             </Banner>
         </PortfolioItemWrapper>
+        </>
+
     )
 }

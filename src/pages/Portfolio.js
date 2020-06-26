@@ -58,7 +58,7 @@ export default function Portfolio(props) {
                     ?
                 <>
                     <Arrow onClick={() => handleArrowClick('back')}>←</Arrow>
-                    <PortfolioItem indexer={{ index, setIndex, length: portfolioItems.length }} item={portfolioItems[index]} />
+                    <PortfolioItem indexer={{ index, setIndex, length: portfolioItems.length }} item={portfolioItems[index]} key={portfolioItems[index]}/>
                     <Arrow onClick={() => handleArrowClick('forward')}>→</Arrow>
                 </>
                     :

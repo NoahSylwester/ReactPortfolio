@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import contactItems from '../contact-items.json';
+import { useMediaQuery } from 'react-responsive';
 
 const Dashboard = styled.div`
     padding: 5px 10px;
@@ -23,7 +24,7 @@ const ContactIconWrapper = styled.a`
     transition: 0.2s;
     :hover {
         box-shadow: inset 0 0 1px lightgrey;
-        background-color: rgba(250,250,250,1)
+        background-color: rgba(250,250,250,1);
     }
     :active {
         box-shadow: inset 0 0 5px lightgrey;
@@ -38,21 +39,41 @@ const ContactIcon = styled.img`
     object-position: 0 0;
 `
 
-const ContactLabel = styled.p`
-    font-size: 0.2rem;
+const ContactLabel = styled.a`
+    font-size: 0.8rem;
     text-decoration: none;
+    color: black;
+    transition: 0.2s;
+    :hover {
+        color: red !important;
+    }
+    :visited {
+        color: black;
+    }
 `
 
 export default function ContactDashboard(props) {
+
+    const isDesktop = useMediaQuery({
+        query: '(min-width: 755px)'
+      })
 
     return (
         <Dashboard>
             {contactItems.map((item, i) => {
                 return (
-                    <ContactIconWrapper key={i} target="_blank" href={item.link}>
+                    <div style={{textAlign:"center"}}>
+                    {
+                    isDesktop
+                    ?
+                        <ContactLabel href={item.link}>{item.name}</ContactLabel>
+                    :
+                        <></>
+                    }
+                    <ContactIconWrapper key={i} target="_blank" href={item.link} name={item.name}>
                         <ContactIcon src={item.iconPath} />
-                        {/* <ContactLabel>{item.name}</ContactLabel> */}
                     </ContactIconWrapper>
+                    </div>
                     )
                 })}
         </Dashboard>

@@ -62,7 +62,7 @@ export default function ContactDashboard(props) {
         <Dashboard>
             {contactItems.map((item, i) => {
                 return (
-                    <div style={{textAlign:"center"}}>
+                    <div key={i + "contactdash"} style={{textAlign:"center"}}>
                     {
                     isDesktop
                     ?
@@ -70,7 +70,7 @@ export default function ContactDashboard(props) {
                     :
                         <></>
                     }
-                    <ContactIconWrapper key={i} target="_blank" href={item.link} name={item.name}>
+                    <ContactIconWrapper key={i + "contactwrapper"} target="_blank" href={item.link} name={item.name}>
                         <ContactIcon src={item.iconPath} />
                     </ContactIconWrapper>
                     </div>

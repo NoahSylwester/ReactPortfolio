@@ -39,14 +39,12 @@ const ContactIcon = styled.img`
     object-position: 0 0;
 `
 
-const ContactLabel = styled.a`
+const ContactLabel = styled.p`
     font-size: 0.8rem;
     text-decoration: none;
     color: black;
     transition: 0.2s;
-    :hover {
-        color: red !important;
-    }
+    cursor: default;
     :visited {
         color: black;
     }
@@ -66,7 +64,7 @@ export default function ContactDashboard(props) {
                     {
                     isDesktop
                     ?
-                        <ContactLabel href={item.link}>{item.name}</ContactLabel>
+                        <ContactLabel>{item.name}</ContactLabel>
                     :
                         <></>
                     }

@@ -73,24 +73,30 @@ const TechnologyIconWrapper = styled.div`
 
 export default function PortfolioItem(props) {
 
-    const { title, technologies, description, source, live, image, bannerRGBA } = props.item;
+    const { title, technologies, description, source, live, image, bannerRGBA } = props.item || { title: null, technologies: [], description: null, source: null, live: null, image: null, bannerRGBA: null };
     const { index, setIndex, length } = props.indexer || { index: null, setIndex: null, length: null };
 
     const changeIndex = (event) => {
-        switch (event.key) {
-            case "ArrowRight":
-                return setIndex(index + 1 <= length - 1 ? index + 1 : 0);
-            case "ArrowLeft":
-                return setIndex(index - 1 >= 0 ? index - 1 : length - 1);
-            default:
-                return;
+        console.log('in event. length is', length)
+        if (length !== 1) {
+            switch (event.key) {
+                case "ArrowRight":
+                    return setIndex(index + 1 <= length - 1 ? index + 1 : 0);
+                case "ArrowLeft":
+                    return setIndex(index - 1 >= 0 ? index - 1 : length - 1);
+                default:
+                    return;
+            }
+        }
+        else {
+            setIndex(index)
         }
     }
     
     useEffect(() => {
         document.addEventListener('keyup', changeIndex);
         return () => document.removeEventListener('keyup', changeIndex)
-    }, [index])
+    }, [index, length])
 
     return (
         <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image, bannerRGBA }}>

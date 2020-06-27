@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar";
 import portfolioItems from '../portfolio-items.json';
 import proficiencies from '../proficiencies.json';
@@ -67,6 +67,8 @@ export default function Portfolio(props) {
         query: '(min-width: 755px)'
       })
 
+    useEffect(() => console.log('out',index), [index])
+
     const handleArrowClick = (type) => {
         switch (type) {
             case 'back':
@@ -86,6 +88,7 @@ export default function Portfolio(props) {
             const filteredResults = portfolioItems.filter((item) => {
                 return item.technologies.includes(filterQuery);
             })
+            setIndex(0);
             setMatchedPortfolioItems(filteredResults)
         }
     }
@@ -102,7 +105,7 @@ export default function Portfolio(props) {
                 <div>
                     <FilterInput onChange={event => setFilterQuery(event.target.value)}>
                         <option>Select one</option>
-                        {proficiencies.map(proficiency => proficiency.inProject ? <option value={proficiency.technology}>{proficiency.technology}</option> : null)}
+                        {proficiencies.map(proficiency => proficiency.inProject ? <option key={"option" + proficiency.technology} value={proficiency.technology}>{proficiency.technology}</option> : null)}
                     </FilterInput>
                     <FilterButton onClick={handleFilter}>Go</FilterButton>
                     <FilterButton onClick={handleReset}>Undo</FilterButton>

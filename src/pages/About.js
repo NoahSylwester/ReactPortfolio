@@ -44,7 +44,7 @@ export default function About() {
                                 <Proficiency color={item.color}>&nbsp;{item.technology}{i !== proficiencies.length - 1 ? <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span> : ""}</Proficiency>
                             </React.Fragment>
                             :
-                            <></>
+                            <React.Fragment key={item.icon + i}></React.Fragment>
                             )
                         })
                         :
@@ -59,7 +59,7 @@ export default function About() {
                                     <Proficiency color={item.color}>&nbsp;{item.technology}</Proficiency>
                                 </div>
                                 :
-                                <></>
+                                <React.Fragment key={item.icon + i}></React.Fragment>
                                 )
                             })}
                         </div>
@@ -70,10 +70,10 @@ export default function About() {
                 <p style={styles.description}>
                     {bio.paragraphs.map((item,i) => {
                         return (
-                        <>
+                        <React.Fragment key={"bio" + i}>
                             {item}
-                            {i !== bio.paragraphs.length -1 ? <><br /><br /></> : <></>}
-                        </>
+                            {i !== bio.paragraphs.length -1 ? <React.Fragment key={"bioinner" + i}><br /><br /></React.Fragment> : <React.Fragment key={"bioinnerer" + i}></React.Fragment>}
+                        </React.Fragment>
                         )
                     })}
                 </p>

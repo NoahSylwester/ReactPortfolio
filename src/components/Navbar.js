@@ -12,6 +12,7 @@ const NavbarStyled = styled.nav`
     flex-direction: row;
     justify-content: ${props => props.isNotSmallScreen ? "space-around" : "center"};
     align-items: center;
+    pointer-events: none;
 `
 
 const NavLink = styled.div`
@@ -25,6 +26,7 @@ const NavLink = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: auto;
     :hover {
         background-color: rgba(250,250,250,1);
         box-shadow: inset 0px 1px 2px lightgrey;
@@ -54,6 +56,7 @@ const NavBrand = styled.a`
     width: 30px;
     height: 30px;
     border-radius: 50px;
+    pointer-events: auto;
     :hover {
         background-color: rgba(245,245,245,1);
         box-shadow: inset 0px 1px 1px lightgrey;

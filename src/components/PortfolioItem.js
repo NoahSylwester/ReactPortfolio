@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import styled, { keyframes } from "styled-components";
+import proficiencies from '../proficiencies.json';
 // import { fadeIn } from 'react-animations';
 
 // const fadeInAnimation = keyframes`${fadeIn}`;
@@ -49,9 +50,30 @@ const Banner = styled.div`
     }
 `
 
+const TechnologyIcon = styled.img`
+    height: 1rem;
+    width: 1rem;
+    object-fit: contain;
+`
+
+const TechnologyIconWrapper = styled.div`
+    margin: 3px 5px 0 5px;
+    position: relative;
+    :hover {
+        ::after {
+            content: "${props => props.name}";
+            font-size: 0.5rem;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+`
+
 export default function PortfolioItem(props) {
 
-    const { title, description, source, live, image, bannerRGBA } = props.item;
+    const { title, technologies, description, source, live, image, bannerRGBA } = props.item;
     const { index, setIndex, length } = props.indexer || { index: null, setIndex: null, length: null };
 
     const changeIndex = (event) => {
@@ -71,10 +93,16 @@ export default function PortfolioItem(props) {
     }, [index])
 
     return (
-        <>
-        <PortfolioItemWrapper mobile={props.mobile} item={{ image, bannerRGBA }}>
+        <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image, bannerRGBA }}>
             <Banner item={{ image, bannerRGBA }}>
                 <h1 style={{textAlign: "center"}}>{title}</h1>
+                <div style={{display: 'flex', flexDirection: 'row'}}>{technologies.map(technology => {
+                    return (
+                    <TechnologyIconWrapper name={technology} key={technology + title}>
+                        <TechnologyIcon src={proficiencies.filter(proficiency => proficiency.technology === technology)[0].icon} style={{ height: "1rem", width: "1rem", margin: "3px 5px 0 5px" }}/>
+                    </TechnologyIconWrapper>
+                    )
+                })}</div>
                 <p style={{ padding: "0 20px" }}><strong>{description}</strong></p>
                 <div style={{ display: "flex", flexDirection: "row"}}>
                     <a target="_blank" href={source}><strong>Source</strong></a>
@@ -82,7 +110,5 @@ export default function PortfolioItem(props) {
                 </div>
             </Banner>
         </PortfolioItemWrapper>
-        </>
-
     )
 }

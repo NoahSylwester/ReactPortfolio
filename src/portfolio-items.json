@@ -1,6 +1,7 @@
 [
     {
         "title": "StoryBoard",
+        "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
         "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing stories",
         "source": "https://github.com/NoahSylwester/Lore",
         "live": "https://storyboard-online.herokuapp.com/",
@@ -9,6 +10,7 @@
     },
     {
         "title": "StumpAround",
+        "technologies": ["JavaScript", "React", "React Native", "Expo", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
         "description": "A React Native mobile app for PNW hikers and explorers",
         "source": "https://github.com/NoahSylwester/StumpAroundClient",
         "live": "https://expo.io/@noahsylwester/StumpAround",
@@ -17,6 +19,7 @@
     },
     {
         "title": "COVID19 Stats Tracker",
+        "technologies": ["TypeScript","Angular", "D3.js", "Express.js", "Node.js"],
         "description": "An app to track COVID19 data made with Angular and D3",
         "source": "https://github.com/NoahSylwester/COVID19Stats",
         "live": "https://covidstattracker.herokuapp.com/",
@@ -25,6 +28,7 @@
     },
     {
         "title": "Monster News",
+        "technologies": ["JavaScript", "Handlebars", "cheerio.js", "MongoDB", "Mongoose", "Express.js", "Node.js"],
         "description": "A news aggregator for monster stories built using cheerio.js",
         "source": "https://github.com/NoahSylwester/NewsScraper",
         "live": "https://monster-news.herokuapp.com/",
@@ -33,6 +37,7 @@
     },
     {
         "title": "Image Clicker",
+        "technologies": ["JavaScript", "React"],
         "description": "A React memory game that scales in difficulty as you play",
         "source": "https://github.com/NoahSylwester/Image_Clicker",
         "live": "https://noahsylwester.github.io/Image_Clicker",
@@ -41,6 +46,7 @@
     },
     {
         "title": "Monstrous",
+        "technologies": ["JavaScript", "Express.js", "Node.js"],
         "description": "A fullstack dating app for monsters built with express.js ",
         "source": "https://github.com/NoahSylwester/FriendFinder",
         "live": "https://monstrous.herokuapp.com/",
@@ -49,6 +55,7 @@
     },
     {
         "title": "RPS Online",
+        "technologies": ["JavaScript", "Firebase"],
         "description": "High stakes online Rock-Paper-Scissors with live chat built with FireBase. Beat your friends!",
         "source": "https://github.com/NoahSylwester/RPS-Multiplayer",
         "live": "https://noahsylwester.github.io/RPS-Multiplayer",
@@ -57,6 +64,7 @@
     },
     {
         "title": "Cattle vs Mechs",
+        "technologies": ["JavaScript"],
         "description": "An epic RPG. Which side will you choose?",
         "source": "https://github.com/NoahSylwester/unit-4-game",
         "live": "https://noahsylwester.github.io/unit-4-game",
@@ -65,6 +73,7 @@
     },
     {
         "title": "Bamazon Storefront",
+        "technologies": ["Node.js", "SQL", "MySQL"],
         "description": "A command line tool to manipulate a storefront's SQL database",
         "source": "https://github.com/noahsylwester/bamazon",
         "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%202019-10-01%20at%208.06.16%20PM.png",
@@ -72,6 +81,7 @@
     },
     {
         "title": "Squirrel Defense",
+        "technologies": ["Scratch"],
         "description": "A silly scratch game. Nothing complicated, just for fun",
         "source": "https://scratch.mit.edu/projects/317874867/editor/",
         "live": "https://scratch.mit.edu/projects/317874867/",

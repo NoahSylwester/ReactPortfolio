@@ -35,11 +35,16 @@ export default function About() {
                         ?
                         // desktop view
                         proficiencies.map((item, i) => {
+
                             return (
+                            item.proficient
+                            ?
                             <React.Fragment key={item.icon + i}>
                                 {item.icon ? <img src={item.icon} style={{height: "1rem", width: "1rem"}}/> : <></>}
-                                <Proficiency color={item.color}>{item.technology}{i !== proficiencies.length - 1 ? <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span> : ""}</Proficiency>
+                                <Proficiency color={item.color}>&nbsp;{item.technology}{i !== proficiencies.length - 1 ? <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span> : ""}</Proficiency>
                             </React.Fragment>
+                            :
+                            <></>
                             )
                         })
                         :
@@ -47,10 +52,14 @@ export default function About() {
                         <div style={styles.proficienciesGrid}>
                             {proficiencies.map((item, i) => {
                                 return (
+                                item.proficient
+                                ?
                                 <div key={item.icon + i} style={{ paddingLeft: isSmallScreen ? "0" : "20%", whiteSpace: "nowrap" }}>
                                     {item.icon ? <img src={item.icon} style={{height: "1rem", width: "1rem"}}/> : <></>}
-                                    <Proficiency color={item.color}>{item.technology}</Proficiency>
+                                    <Proficiency color={item.color}>&nbsp;{item.technology}</Proficiency>
                                 </div>
+                                :
+                                <></>
                                 )
                             })}
                         </div>

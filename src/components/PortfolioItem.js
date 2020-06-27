@@ -64,6 +64,7 @@ const TechnologyIconWrapper = styled.div`
             content: "${props => props.name}";
             font-size: 0.5rem;
             position: absolute;
+            white-space: nowrap;
             bottom: -10px;
             left: 50%;
             transform: translate(-50%, 0);

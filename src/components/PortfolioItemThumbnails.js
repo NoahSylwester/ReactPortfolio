@@ -7,6 +7,7 @@ const Thumbnail = styled.div`
     border-radius: 25px;
     background-image: url(${props => props.item.image});
     background-size: cover;
+    background-position: center;
     border: ${props => props.isCurrentIndex ? "1px solid black" : "1px solid white"};
     box-shadow: ${props => props.isCurrentIndex ? "0px 2px 7px black" : "0px 2px 7px lightgrey"};
     cursor: pointer;

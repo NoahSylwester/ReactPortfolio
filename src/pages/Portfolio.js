@@ -67,8 +67,6 @@ export default function Portfolio(props) {
         query: '(min-width: 755px)'
       })
 
-    useEffect(() => console.log('out',index), [index])
-
     const handleArrowClick = (type) => {
         switch (type) {
             case 'back':

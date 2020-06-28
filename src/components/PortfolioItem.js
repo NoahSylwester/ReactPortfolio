@@ -78,7 +78,6 @@ export default function PortfolioItem(props) {
     const { index, setIndex, length } = props.indexer || { index: null, setIndex: null, length: null };
 
     const changeIndex = (event) => {
-        console.log('in event. length is', length)
         if (length !== 1) {
             switch (event.key) {
                 case "ArrowRight":

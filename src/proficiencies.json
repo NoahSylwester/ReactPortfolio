@@ -176,19 +176,19 @@
         "proficient": false
     },
     {
-        "technology": "REST",
-        "type": "Protocol",
-        "color": "black",
-        "icon": null,
-        "inProject": false,
-        "proficient": true
-    },
-    {
         "technology": "Scratch",
         "type": "Programming Language",
         "color": "black",
         "icon": "https://sites.google.com/site/lishakilltech/_/rsrc/1520861004111/scratch/ScratchCat-Large.png?height=320&width=320",
         "inProject": true,
         "proficient": false
+    },
+    {
+        "technology": "REST",
+        "type": "Protocol",
+        "color": "black",
+        "icon": null,
+        "inProject": false,
+        "proficient": true
     }
 ]

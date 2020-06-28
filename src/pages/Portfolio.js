@@ -104,7 +104,7 @@ export default function Portfolio(props) {
                 <p style={{ marginBottom: 5 }}>Filter by technology</p>
                 <div>
                     <FilterInput onChange={event => setFilterQuery(event.target.value)}>
-                        <option>Select one</option>
+                        <option value=''>Select one</option>
                         {proficiencies.map(proficiency => proficiency.inProject ? <option key={"option" + proficiency.technology} value={proficiency.technology}>{proficiency.technology}</option> : null)}
                     </FilterInput>
                     <FilterButton onClick={handleFilter}>Go</FilterButton>

@@ -30,7 +30,7 @@
     {
         "title": "chatcat",
         "technologies": ["ASP.NET","C#", "JavaScript", "Azure"],
-        "description": "An app to track COVID19 data made with Angular and D3",
+        "description": "A simple chat app built in ASP.NET",
         "source": "https://github.com/NoahSylwester/chatcat",
         "live": "https://chatcat.azurewebsites.net/",
         "image": "https://noahsylwester.github.io/Portfolio/assets/images/chatcat.png",

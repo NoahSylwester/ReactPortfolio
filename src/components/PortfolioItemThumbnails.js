@@ -5,7 +5,7 @@ const Thumbnail = styled.div`
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    background-image: url(${props => props.item.image});
+    background-image: url(${props => props.item.thumbnail || props.item.image});
     background-size: cover;
     background-position: center;
     border: ${props => props.isCurrentIndex ? "1px solid black" : "1px solid white"};

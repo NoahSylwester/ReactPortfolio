@@ -18,7 +18,7 @@ const PortfolioItemWrapper = styled.div`
     align-items: center;
     background-image: url(${props => props.item.image});
     background-size: cover;
-    background-position: center;
+    background-position: center 0px;
 `
 
 const Banner = styled.div`
@@ -52,7 +52,6 @@ const Banner = styled.div`
 
 const TechnologyIcon = styled.img`
     height: 1rem;
-    width: 1rem;
     object-fit: contain;
 `
 

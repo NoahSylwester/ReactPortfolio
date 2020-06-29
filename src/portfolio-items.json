@@ -15,6 +15,7 @@
         "source": "https://github.com/NoahSylwester/StumpAroundClient",
         "live": "https://expo.io/@noahsylwester/StumpAround",
         "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%20stumparound.png",
+        "thumbnail": "https://d1wp6m56sqw74a.cloudfront.net/~assets/d2222ce3167fd6782cb1144317e09c86",
         "bannerRGBA": "rgba(256,256,256,0.9)"
     },
     {
@@ -24,6 +25,16 @@
         "source": "https://github.com/NoahSylwester/COVID19Stats",
         "live": "https://covidstattracker.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/COVID19Stats/master/screenshot.png",
+        "bannerRGBA": "rgba(256,256,256,0.9)"
+    },
+    {
+        "title": "chatcat",
+        "technologies": ["ASP.NET","C#", "JavaScript", "Azure"],
+        "description": "An app to track COVID19 data made with Angular and D3",
+        "source": "https://github.com/NoahSylwester/chatcat",
+        "live": "https://chatcat.azurewebsites.net/",
+        "image": "https://noahsylwester.github.io/Portfolio/assets/images/chatcat.png",
+        "thumbnail": "https://i7.uihere.com/icons/280/167/689/cat-77d66f0a4a50e34849199b98f127c5b4.png",
         "bannerRGBA": "rgba(256,256,256,0.9)"
     },
     {
@@ -51,6 +62,7 @@
         "source": "https://github.com/NoahSylwester/FriendFinder",
         "live": "https://monstrous.herokuapp.com/",
         "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_10_10_2019_10-56-06%20PM.png",
+        "thumbnail": "https://github.com/NoahSylwester/FriendFinder/blob/master/assets/images/monster.png?raw=true",
         "bannerRGBA": "rgba(256,256,256,0.8)"
     },
     {

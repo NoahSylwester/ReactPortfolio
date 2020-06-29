@@ -184,6 +184,30 @@
         "proficient": false
     },
     {
+        "technology": "ASP.NET",
+        "type": "Framework",
+        "color": "black",
+        "icon": "https://sankeysolutions.com/assets/logos/web/net.png",
+        "inProject": true,
+        "proficient": false
+    },
+    {
+        "technology": "C#",
+        "type": "Programming Language",
+        "color": "black",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/C_Sharp_logo.svg/1200px-C_Sharp_logo.svg.png",
+        "inProject": true,
+        "proficient": false
+    },
+    {
+        "technology": "Azure",
+        "type": "Cloud Platform",
+        "color": "black",
+        "icon": "https://www.opsgility.com/Images/logos/azure-logo.png",
+        "inProject": true,
+        "proficient": false
+    },
+    {
         "technology": "REST",
         "type": "Protocol",
         "color": "black",

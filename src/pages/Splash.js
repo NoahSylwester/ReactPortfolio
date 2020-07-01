@@ -3,6 +3,7 @@ import Theme from '../theme.json';
 import styled, { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations';
 import splashImage from '../splash.jpg';
+import SVGLoadingIcon from '../components/SVGLoadingIcon'
 
 const fadeInAnimation = keyframes`${fadeIn}`;
 
@@ -30,10 +31,19 @@ const Reveal = styled.div`
     align-items: center;
     transition: 2s;
     font-size: 1.5rem;
-    background-image: url(${splashImage});
-    background-size: cover;
     z-index: 0;
     overflow: hidden;
+`
+
+const BackgroundImage = styled.img`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: 0 0;
+    z-index: -1;
 `
 
 const Billboard = styled.a`
@@ -71,17 +81,33 @@ const Billboard = styled.a`
 
 export default function Splash(props) {
 
+    const [loading, setLoading] = useState(true);
+    const [backgroundImageSrc, setBackgroundImageSrc] = useState('');
+    
+    //load in background image
+    const image = new Image();
+    image.src = splashImage;
+    image.onload = () => {
+        setBackgroundImageSrc(image.src)
+        setLoading(false);
+    }
+
     return (
         <div style={styles.splash}>
             {
-            <>
-                <Reveal className="reveal">
-                    <Billboard href="/about">
-                        <h1>Noah Sylwester</h1>
-                        <h1>web developer</h1>
-                    </Billboard>
-                </Reveal>
-            </>
+            loading
+            ?
+            <SVGLoadingIcon />
+            :
+            <Reveal className="reveal">
+                <Billboard href="/about">
+                    <h1>Noah Sylwester</h1>
+                    <h1>web developer</h1>
+                </Billboard>
+                <BackgroundImage
+                    src={backgroundImageSrc}
+                     />
+            </Reveal>
             }
         </div>
     )

@@ -7,7 +7,7 @@ import proficiencies from '../proficiencies.json';
 
 const PortfolioItemWrapper = styled.div`
     background-color: white;
-    box-shadow: 0px 1px 5px lightgrey;
+    box-shadow: inset 0px 1px 5px lightgrey;
     width: ${props => props.mobile ? "100%" : "80%"};
     min-width: 200px;
     height: 400px;
@@ -23,7 +23,7 @@ const PortfolioItemWrapper = styled.div`
 
 const Banner = styled.div`
     background-color: ${props => props.item.bannerRGBA};
-    border: 1px solid rgba(245,245,245,1);
+    border: 3px solid rgba(235,235,235,1);
     border-right: 0;
     border-left: 0;
     width: 100%;
@@ -36,7 +36,7 @@ const Banner = styled.div`
         margin: 10px;
     }
     a {
-        color: red !important;
+        color: rgba(0,200,50,1) !important;
         text-decoration: none;
         margin: 2px;
         padding: 5px;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
-const loadingAnimation = (spinRadius, startingRotation) => keyframes`
+const loadingAnimation = (spinRadius) => keyframes`
     from {
         transform: rotate(0deg) translateX(${spinRadius}px) rotate(0deg);
     }
@@ -9,6 +9,20 @@ const loadingAnimation = (spinRadius, startingRotation) => keyframes`
         transform: rotate(360deg) translateX(${spinRadius}px) rotate(-360deg);
     }
 `
+// const loadingPulseAnimation = () => keyframes`
+//     0% {
+//         r: 20;
+//         opacity: 1;
+//         stroke-width: 10;
+//     }
+//     100% {
+//         fill: white;
+//         stroke-width: 10;
+//         r: 70;
+//         opacity: 0;
+//     }
+// `
+
 
 const LoadingSVGWrapper = styled.svg`
     width: 30vw;
@@ -22,6 +36,11 @@ const LoadingCircle = styled.circle`
     animation: ${props => props.animationDuration} ${props => loadingAnimation(props.spinRadius)} linear infinite;
     fill: ${props => props.fill};
 `
+
+// const LoadingPulse = styled.circle`
+//     animation: ${props => props.animationDuration} ${loadingPulseAnimation} ease-out infinite;
+//     fill: ${props => props.fill};
+// `
 
 export default function SVGLoadingIcon(props) {
 
@@ -43,6 +62,23 @@ export default function SVGLoadingIcon(props) {
                 animationDuration="0.7s"
                 spinRadius="-30"
             ></LoadingCircle>
+
+            {/* <LoadingPulse
+                cx="50%"
+                cy="50%"
+                r="20"
+                fill="rgba(0,0,0,0)"
+                stroke="rgba(38,150,46,0.8)"
+                animationDuration="0.6s"
+            ></LoadingPulse> */}
+            {/* <LoadingPulse
+                cx="50%"
+                cy="50%"
+                r="20"
+                fill="white"
+                animationDuration="0.7s"
+            ></LoadingPulse> */}
+
             {/* <LoadingCircle
                 cx="50%"
                 cy="50%"

@@ -103,7 +103,8 @@ export default function Portfolio(props) {
                 <div>
                     <FilterInput onChange={event => setFilterQuery(event.target.value)}>
                         <option value=''>Select one</option>
-                        {proficiencies.map(proficiency => proficiency.inProject ? <option key={"option" + proficiency.technology} value={proficiency.technology}>{proficiency.technology}</option> : null)}
+                        {/* sort and return available technologies */}
+                        {proficiencies.sort((a,b) => a.technology.toUpperCase() > b.technology.toUpperCase() ? 1 : -1).map(proficiency => proficiency.inProject ? <option key={"option" + proficiency.technology} value={proficiency.technology}>{proficiency.technology}</option> : null)}
                     </FilterInput>
                     <FilterButton onClick={handleFilter}>Go</FilterButton>
                     <FilterButton onClick={handleReset}>Undo</FilterButton>

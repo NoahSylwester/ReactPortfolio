@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from "styled-components";
 import proficiencies from '../proficiencies.json';
+import SVGLoadingIcon from '../components/SVGLoadingIcon'
 // import { fadeIn } from 'react-animations';
 
 // const fadeInAnimation = keyframes`${fadeIn}`;
@@ -76,6 +77,17 @@ export default function PortfolioItem(props) {
     const { title, technologies, description, source, live, image, bannerRGBA } = props.item || { title: null, technologies: [], description: null, source: null, live: null, image: null, bannerRGBA: null };
     const { index, setIndex, length } = props.indexer || { index: null, setIndex: null, length: null };
 
+    const [loading, setLoading] = useState(true);
+    const [imageSrc, setImageSrc] = useState('');
+    
+    //load in background image
+    const imageToLoad = new Image();
+    imageToLoad.src = image;
+    imageToLoad.onload = () => {
+        setImageSrc(imageToLoad.src)
+        setLoading(false);
+    }
+
     const changeIndex = (event) => {
         if (length !== 1) {
             switch (event.key) {
@@ -98,7 +110,11 @@ export default function PortfolioItem(props) {
     }, [index, length])
 
     return (
-        <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image, bannerRGBA }}>
+        loading
+        ?
+        <SVGLoadingIcon duration={0.4}/>
+        :
+        <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image: imageSrc, bannerRGBA }}>
             <Banner item={{ image, bannerRGBA }}>
                 <h1 style={{textAlign: "center"}}>{title}</h1>
                 <div style={{display: 'flex', flexDirection: 'row'}}>{technologies.map(technology => {

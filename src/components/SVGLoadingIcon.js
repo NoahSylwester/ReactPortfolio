@@ -51,7 +51,7 @@ export default function SVGLoadingIcon(props) {
                 cy="50%"
                 r="20"
                 fill="rgba(38,74,24,0.8)"
-                animationDuration="0.7s"
+                animationDuration={`${props.duration || 0.7}s`}
                 spinRadius="30"
             ></LoadingCircle>
             <LoadingCircle
@@ -59,7 +59,7 @@ export default function SVGLoadingIcon(props) {
                 cy="50%"
                 r="20"
                 fill="rgba(105,172,45,0.8)"
-                animationDuration="0.7s"
+                animationDuration={`${props.duration || 0.7}s`}
                 spinRadius="-30"
             ></LoadingCircle>
 

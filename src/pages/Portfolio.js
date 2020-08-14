@@ -60,6 +60,7 @@ const FilterButton = styled.button`
 
 export default function Portfolio(props) {
 
+    const [doneLoading, setDoneLoading] = useState(false)
     const [index, setIndex] = useState(0);
     const [matchedPortfolioItems, setMatchedPortfolioItems] = useState(portfolioItems);
     const [filterQuery, setFilterQuery] = useState('')
@@ -115,18 +116,18 @@ export default function Portfolio(props) {
                 isDesktop
                     ?
                 <>
-                    <Arrow onClick={() => handleArrowClick('back')}>←</Arrow>
-                    <PortfolioItem indexer={{ index, setIndex, length: matchedPortfolioItems.length }} item={matchedPortfolioItems[index]} key={matchedPortfolioItems[index]}/>
-                    <Arrow onClick={() => handleArrowClick('forward')}>→</Arrow>
+                    {doneLoading ? <Arrow onClick={() => handleArrowClick('back')}>←</Arrow> : <></>}
+                    <PortfolioItem indexer={{ index, setIndex, length: matchedPortfolioItems.length }} item={matchedPortfolioItems[index]} key={matchedPortfolioItems[index]} setDoneLoading={setDoneLoading}/>
+                    {doneLoading ? <Arrow onClick={() => handleArrowClick('forward')}>→</Arrow> : <></>}
                 </>
                     :
                 <>
-                    {matchedPortfolioItems.map((item, i) => <PortfolioItem mobile key={"mobileitem" + i} item={item} />)}
+                    {matchedPortfolioItems.map((item, i) => <PortfolioItem mobile key={"mobileitem" + i} item={item} setDoneLoading={setDoneLoading} />)}
                 </>
                 }
             </div>
             {
-                isDesktop
+                isDesktop && doneLoading
                 ?
                 <PortfolioItemThumbnails items={matchedPortfolioItems} currentIndex={index} changeIndex={(index) => setIndex(index)} />
                 :

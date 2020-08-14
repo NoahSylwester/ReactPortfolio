@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from "../components/Navbar";
 import ContactDashboard from '../components/ContactDashboard';
 import styled from 'styled-components';
 import proficiencies from '../proficiencies.json';
 import bio from '../bio.json';
+import SVGLoadingIcon from '../components/SVGLoadingIcon'
 import { useMediaQuery } from 'react-responsive';
 
-export default function About() {
+export default function About(props) {
 
     const isDesktop = useMediaQuery({
         query: '(min-width: 755px)'
@@ -14,6 +15,19 @@ export default function About() {
     const isSmallScreen = !useMediaQuery({
         query: '(min-width: 430px)'
       })
+
+    const [loading, setLoading] = useState(true);
+    const [imageSrc, setImageSrc] = useState('');
+    
+    //load in background image
+    const imageToLoad = new Image();
+    imageToLoad.src = "https://noahsylwester.github.io/Portfolio/assets/images/profile_pic%20copy.jpg";
+    imageToLoad.onload = () => {
+        setImageSrc(imageToLoad.src)
+        // setTimeout(() => {
+        setLoading(false);
+        // }, 3000)
+    }
 
     const styles = isDesktop ? stylesDesktop : stylesMobile;
 
@@ -25,7 +39,9 @@ export default function About() {
         <div style={styles.page}>
             <Navbar About />
             <div style={styles.pageBody}>
-                <img style={styles.img} src="https://noahsylwester.github.io/Portfolio/assets/images/profile_pic%20copy.jpg"></img>
+                <div style={styles.imgContainer}>
+                    {loading ? <SVGLoadingIcon about/> : <img style={styles.img} src={imageSrc}></img>}
+                </div>
                 <ContactDashboard />
                 <div style={styles.proficiencies}>
                     <p style={{ marginBottom: 10 }}>Proficient in</p>
@@ -102,6 +118,10 @@ const stylesDesktop = {
         borderRadius: "200px",
         boxShadow: "0 1px 7px lightgrey"
     },
+    imgContainer: {
+        height: "300px",
+        width: "300px",
+    },
     proficiencies: {
         width: "70%",
         padding: 20,
@@ -132,6 +152,10 @@ const stylesMobile = {
         height: "250px",
         width: "250px",
         borderRadius: "200px",
+    },
+    imgContainer: {
+        height: "300px",
+        width: "300px",
     },
     proficiencies: {
         width: "80%",

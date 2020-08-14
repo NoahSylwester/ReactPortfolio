@@ -25,8 +25,8 @@ const loadingAnimation = (spinRadius) => keyframes`
 
 
 const LoadingSVGWrapper = styled.svg`
-    width: 30vw;
-    height: 30vw;
+    width: ${props => props.about ? "100%" : "30vw"};
+    height: ${props => props.about ? "100%" : "30vw"};
     max-width: 90vh;
     max-height: 90vh;
     border-radius: 3000px;
@@ -45,7 +45,7 @@ const LoadingCircle = styled.circle`
 export default function SVGLoadingIcon(props) {
 
     return (
-        <LoadingSVGWrapper>
+        <LoadingSVGWrapper about={props.about}>
             <LoadingCircle
                 cx="50%"
                 cy="50%"

@@ -85,7 +85,10 @@ export default function PortfolioItem(props) {
     imageToLoad.src = image;
     imageToLoad.onload = () => {
         setImageSrc(imageToLoad.src)
-        setLoading(false);
+        // setTimeout(() => {
+            setLoading(false);
+            props.setDoneLoading(true);
+        // }, 3000)
     }
 
     const changeIndex = (event) => {
@@ -112,7 +115,7 @@ export default function PortfolioItem(props) {
     return (
         loading
         ?
-        <SVGLoadingIcon duration={0.4}/>
+        <SVGLoadingIcon duration={0.5}/>
         :
         <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image: imageSrc, bannerRGBA }}>
             <Banner item={{ image, bannerRGBA }}>

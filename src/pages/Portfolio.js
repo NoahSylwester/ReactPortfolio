@@ -36,6 +36,9 @@ const FilterInput = styled.select`
     :focus {
         outline: none;
     }
+    :hover {
+        box-shadow: 0px 1px 4px lightgrey;
+    }
 `
 const FilterButton = styled.button`
     width: 40px;

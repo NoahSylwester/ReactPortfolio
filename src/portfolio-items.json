@@ -19,6 +19,16 @@
         "bannerRGBA": "rgba(256,256,256,0.9)"
     },
     {
+        "title": "Pinhead",
+        "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
+        "description": "A tool for attaching data to images",
+        "source": "https://github.com/NoahSylwester/Pinhead",
+        "live": "https://pinhead.herokuapp.com/",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/pinhead.png",
+        "thumbnail": "https://raw.githubusercontent.com/NoahSylwester/Pinhead/master/client/src/pinhead.png",
+        "bannerRGBA": "rgba(256,256,256,0.9)"
+    },
+    {
         "title": "COVID19 Stats Tracker",
         "technologies": ["TypeScript","Angular", "D3.js", "Express.js", "Node.js"],
         "description": "An app to track COVID19 data made with Angular and D3",

@@ -5,7 +5,7 @@
         "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing stories",
         "source": "https://github.com/NoahSylwester/Lore",
         "live": "https://storyboard-online.herokuapp.com/",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/splash.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/splash.png",
         "bannerRGBA": "rgba(256,256,256,0.9)"
     },
     {
@@ -14,7 +14,7 @@
         "description": "A React Native mobile app for PNW hikers and explorers",
         "source": "https://github.com/NoahSylwester/StumpAroundClient",
         "live": "https://expo.io/@noahsylwester/StumpAround",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%20stumparound.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/Screen%20Shot%20stumparound.png",
         "thumbnail": "https://d1wp6m56sqw74a.cloudfront.net/~assets/d2222ce3167fd6782cb1144317e09c86",
         "bannerRGBA": "rgba(256,256,256,0.9)"
     },
@@ -43,7 +43,7 @@
         "description": "A simple chat app built in ASP.NET",
         "source": "https://github.com/NoahSylwester/chatcat",
         "live": "https://chatcat.azurewebsites.net/",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/chatcat.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/chatcat.png",
         "thumbnail": "https://i7.uihere.com/icons/280/167/689/cat-77d66f0a4a50e34849199b98f127c5b4.png",
         "bannerRGBA": "rgba(256,256,256,0.8)"
     },
@@ -53,7 +53,7 @@
         "description": "A news aggregator for monster stories built using cheerio.js",
         "source": "https://github.com/NoahSylwester/NewsScraper",
         "live": "https://monster-news.herokuapp.com/",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_11_20_2019_6-02-19%20PM.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_11_20_2019_6-02-19%20PM.png",
         "bannerRGBA": "rgba(256,256,256,0.8)"
     },
     {
@@ -62,7 +62,7 @@
         "description": "A React memory game that scales in difficulty as you play",
         "source": "https://github.com/NoahSylwester/Image_Clicker",
         "live": "https://noahsylwester.github.io/Image_Clicker",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/FireShot%20Capture%20001%20-%20Image%20Clicker%20-%20noahsylwester.github.io.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/FireShot%20Capture%20001%20-%20Image%20Clicker%20-%20noahsylwester.github.io.png",
         "bannerRGBA": "rgba(256,256,256,0.8)"
     },
     {
@@ -71,7 +71,7 @@
         "description": "A fullstack dating app for monsters built with express.js ",
         "source": "https://github.com/NoahSylwester/FriendFinder",
         "live": "https://monstrous.herokuapp.com/",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_10_10_2019_10-56-06%20PM.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_10_10_2019_10-56-06%20PM.png",
         "thumbnail": "https://github.com/NoahSylwester/FriendFinder/blob/master/assets/images/monster.png?raw=true",
         "bannerRGBA": "rgba(256,256,256,0.8)"
     },
@@ -81,7 +81,7 @@
         "description": "High stakes online Rock-Paper-Scissors with live chat built with FireBase. Beat your friends!",
         "source": "https://github.com/NoahSylwester/RPS-Multiplayer",
         "live": "https://noahsylwester.github.io/RPS-Multiplayer",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_9_17_2019_5-57-35%20PM.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_9_17_2019_5-57-35%20PM.png",
         "bannerRGBA": "rgba(256,256,256,0.9)"
     },
     {
@@ -90,7 +90,7 @@
         "description": "An epic RPG. Which side will you choose?",
         "source": "https://github.com/NoahSylwester/unit-4-game",
         "live": "https://noahsylwester.github.io/unit-4-game",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/scrnli_9_17_2019_5-57-10%20PM.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_9_17_2019_5-57-10%20PM.png",
         "bannerRGBA": "rgba(256,256,256,0.8)"
     },
     {
@@ -98,7 +98,7 @@
         "technologies": ["Node.js", "SQL", "MySQL"],
         "description": "A command line tool to manipulate a storefront's SQL database",
         "source": "https://github.com/noahsylwester/bamazon",
-        "image": "https://noahsylwester.github.io/Portfolio/assets/images/Screen%20Shot%202019-10-01%20at%208.06.16%20PM.png",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/Screen%20Shot%202019-10-01%20at%208.06.16%20PM.png",
         "bannerRGBA": "rgba(256,256,256,0.8)"
     },
     {

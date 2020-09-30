@@ -21,7 +21,7 @@ export default function About(props) {
     
     //load in background image
     const imageToLoad = new Image();
-    imageToLoad.src = "https://noahsylwester.github.io/Portfolio/assets/images/profile_pic%20copy.jpg";
+    imageToLoad.src = "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/profile_pic%20copy.jpg";
     imageToLoad.onload = () => {
         setImageSrc(imageToLoad.src)
         // setTimeout(() => {

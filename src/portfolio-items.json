@@ -21,7 +21,7 @@
     {
         "title": "Pinhead",
         "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
-        "description": "A tool for attaching data to images",
+        "description": "A tool for attaching data to images, built with React, express.js, mongoDB, and Canvas",
         "source": "https://github.com/NoahSylwester/Pinhead",
         "live": "https://pinhead.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/pinhead.png",

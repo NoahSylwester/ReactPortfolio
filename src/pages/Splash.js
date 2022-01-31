@@ -52,7 +52,7 @@ const Billboard = styled.a`
     height: 60vw;
     max-height: 80vh;
     max-width: 80vh;
-    border-radius: 300px;
+    border-radius: 500px;
     font-size: min(3vw, 4vh);
     background-color: rgba(0,0,0,0.2);
     border: 1px lemonchiffon solid;

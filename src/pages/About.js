@@ -24,9 +24,7 @@ export default function About(props) {
     imageToLoad.src = "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/profile_pic%20copy.jpg";
     imageToLoad.onload = () => {
         setImageSrc(imageToLoad.src)
-        // setTimeout(() => {
         setLoading(false);
-        // }, 3000)
     }
 
     const styles = isDesktop ? stylesDesktop : stylesMobile;
@@ -103,6 +101,7 @@ const stylesDesktop = {
     page: {
         backgroundColor: 'white',
         height: "100%",
+        overflow: 'scroll'
     },
     pageBody: {
         padding: "100px 100px 100px 120px",

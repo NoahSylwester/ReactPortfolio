@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from "styled-components";
 import proficiencies from '../proficiencies.json';
-import SVGLoadingIcon from '../components/SVGLoadingIcon'
-// import { fadeIn } from 'react-animations';
-
-// const fadeInAnimation = keyframes`${fadeIn}`;
+import SVGLoadingIcon from '../components/SVGLoadingIcon';
 
 const PortfolioItemWrapper = styled.div`
     background-color: white;
     box-shadow: inset 0px 1px 5px lightgrey;
     width: ${props => props.mobile ? "100%" : "80%"};
     min-width: 200px;
-    height: 400px;
+    height: 50vh;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -74,7 +71,7 @@ const TechnologyIconWrapper = styled.div`
 
 export default function PortfolioItem(props) {
 
-    const { title, technologies, description, source, live, image, bannerRGBA } = props.item || { title: null, technologies: [], description: null, source: null, live: null, image: null, bannerRGBA: null };
+    const { title, technologies, description, source, live, image, bannerRGBA, appStore, playStore } = props.item || { title: null, technologies: [], description: null, source: null, live: null, image: null, bannerRGBA: null, appStore: null, playStore: null };
     const { index, setIndex, length } = props.indexer || { index: null, setIndex: null, length: null };
 
     const [loading, setLoading] = useState(true);
@@ -85,10 +82,8 @@ export default function PortfolioItem(props) {
     imageToLoad.src = image;
     imageToLoad.onload = () => {
         setImageSrc(imageToLoad.src)
-        // setTimeout(() => {
-            setLoading(false);
-            props.setDoneLoading(true);
-        // }, 3000)
+        setLoading(false);
+        props.setDoneLoading(true);
     }
 
     const changeIndex = (event) => {
@@ -129,8 +124,10 @@ export default function PortfolioItem(props) {
                 })}</div>
                 <p style={{ padding: "0 20px" }}><strong>{description}</strong></p>
                 <div style={{ display: "flex", flexDirection: "row"}}>
-                    <a target="_blank" href={source}><strong>Source</strong></a>
-                    {live ? <a target="_blank" href={live}><strong>See it live</strong></a> : <div />}
+                    {source && <a target="_blank" href={source}><strong>Source</strong></a>}
+                    {live && <a target="_blank" href={live}><strong>See it live</strong></a>}
+                    {appStore && <a target="_blank" href={appStore}><strong>iOS</strong></a>}
+                    {playStore && <a target="_blank" href={playStore}><strong>Android</strong></a>}
                 </div>
             </Banner>
         </PortfolioItemWrapper>

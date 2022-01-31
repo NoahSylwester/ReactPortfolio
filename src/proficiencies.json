@@ -3,7 +3,7 @@
         "technology": "JavaScript",
         "type": "Programming Language",
         "color": "black",
-        "icon": "https://images.vexels.com/media/users/3/166403/isolated/preview/a5a33bf3004830a2bd581e9fa65de660-javascript-programming-language-icon-by-vexels.png",
+        "icon": "https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png",
         "inProject": true,
         "proficient": true
     },
@@ -11,9 +11,9 @@
         "technology": "TypeScript",
         "type": "Programming Language",
         "color": "black",
-        "icon": "https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png",
         "inProject": true,
-        "proficient": false
+        "proficient": true
     },
     {
         "technology": "Python",
@@ -30,6 +30,22 @@
         "icon": "https://cdn.iconscout.com/icon/free/png-512/r-5-283170.png",
         "inProject": false,
         "proficient": true
+    },
+    {
+        "technology": "Cordova",
+        "type": "Framework",
+        "color": "black",
+        "icon": "https://cordova.apache.org/static/img/cordova_256.png",
+        "inProject": true,
+        "proficient": true
+    },
+    {
+        "technology": "Ionic",
+        "type": "Framework",
+        "color": "black",
+        "icon": "https://ionicframework.com/blog/wp-content/uploads/2016/08/ionic-icon.png",
+        "inProject": true,
+        "proficient": false
     },
     {
         "technology": "React",
@@ -123,7 +139,7 @@
         "technology": "CSS3",
         "type": "Language",
         "color": "black",
-        "icon": "https://www.kindpng.com/picc/m/464-4640184_css3-png-download-css-icon-transparent-png.png",
+        "icon": "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png",
         "inProject": false,
         "proficient": true
     },
@@ -131,9 +147,9 @@
         "technology": "Firebase",
         "type": "Cloud Platform",
         "color": "black",
-        "icon": "https://www.gstatic.com/devrel-devsite/prod/vc0d10ef7c6e8aac6c71e2a2051f66f30f3c99a4b52237746839ce4f1fae2b7b4/firebase/images/touchicon-180.png",
+        "icon": "https://user-images.githubusercontent.com/235454/41639010-109056e4-7411-11e8-871e-296c019d57a2.png",
         "inProject": true,
-        "proficient": false
+        "proficient": true
     },
     {
         "technology": "SQL",
@@ -149,7 +165,7 @@
         "color": "black",
         "icon": "https://library.kissclipart.com/20180925/oaw/kissclipart-mysql-clipart-whales-dolphins-and-porpoises-562f8f7777aeb105.png",
         "inProject": true,
-        "proficient": true
+        "proficient": false
     },
     {
         "technology": "MongoDB",
@@ -157,7 +173,7 @@
         "color": "black",
         "icon": "https://cdn.iconscout.com/icon/free/png-512/mongodb-2-1175137.png",
         "inProject": true,
-        "proficient": true
+        "proficient": false
     },
     {
         "technology": "Mongoose",
@@ -195,7 +211,7 @@
         "technology": "C#",
         "type": "Programming Language",
         "color": "black",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/C_Sharp_logo.svg/1200px-C_Sharp_logo.svg.png",
+        "icon": "https://logodix.com/logo/773624.png",
         "inProject": true,
         "proficient": false
     },
@@ -203,7 +219,7 @@
         "technology": "Azure",
         "type": "Cloud Platform",
         "color": "black",
-        "icon": "https://www.opsgility.com/Images/logos/azure-logo.png",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png",
         "inProject": true,
         "proficient": false
     },
@@ -214,5 +230,13 @@
         "icon": null,
         "inProject": false,
         "proficient": true
+    },
+    {
+        "technology": "BootstrapVue",
+        "type": "CSS Framework",
+        "color": "black",
+        "icon": "https://bootstrap-vue.org/_nuxt/icons/icon_512x512.67aef2.png",
+        "inProject": true,
+        "proficient": false
     }
 ]

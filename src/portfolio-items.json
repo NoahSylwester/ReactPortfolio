@@ -1,12 +1,33 @@
 [
     {
+        "title": "Planning",
+        "technologies": ["TypeScript", "Vue", "Firebase", "BootstrapVue"],
+        "description": "An iOS/Android/web app for scheduling religious and musical events, featuring tight integrations with other services and apps plus a full messenger component",
+        "live": "https://planning.worshipextreme.com/app",
+        "appStore": "https://apps.apple.com/us/app/planning-by-we/id1586693784",
+        "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.planning&hl=en_US&gl=US",
+        "image": "planning.png",
+        "bannerRGBA": "rgba(256,256,256,0.97)",
+        "thumbnail": "https://play-lh.googleusercontent.com/d9b1W1Pw7HMYNlwWZYe6YBNMCcG_sxdFSlDqUnuNqAm-ojOwhmyC0ShtYru6M3rFFw=s180-rw"
+    },
+    {
+        "title": "Music Stand",
+        "technologies": ["TypeScript", "Angular", "Firebase", "Ionic"],
+        "description": "An iOS/Android/web app for displaying sheet music, featuring a rich editor and tight integrations with other services",
+        "appStore": "https://apps.apple.com/us/app/music-stand-by-we/id1511797596",
+        "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.musicstand&hl=en_US&gl=US", 
+        "image": "ms.png",
+        "bannerRGBA": "rgba(256,256,256,0.97)",
+        "thumbnail": "https://play-lh.googleusercontent.com/I7F4kFLAbw8wNAV8dZsF8vrDXBqaVZHAR3NGel_ASsDFc2zdFBh0Q_HZDmffYx2F3qM=s180-rw"
+    },
+    {
         "title": "StoryBoard",
         "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
         "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing stories",
         "source": "https://github.com/NoahSylwester/Lore",
         "live": "https://storyboard-online.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/splash.png",
-        "bannerRGBA": "rgba(256,256,256,0.9)"
+        "bannerRGBA": "rgba(256,256,256,0.97)"
     },
     {
         "title": "StumpAround",
@@ -16,7 +37,7 @@
         "live": "https://expo.io/@noahsylwester/StumpAround",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/Screen%20Shot%20stumparound.png",
         "thumbnail": "https://d1wp6m56sqw74a.cloudfront.net/~assets/d2222ce3167fd6782cb1144317e09c86",
-        "bannerRGBA": "rgba(256,256,256,0.9)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "Pinhead",
@@ -26,7 +47,7 @@
         "live": "https://pinhead.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/pinhead.png",
         "thumbnail": "https://raw.githubusercontent.com/NoahSylwester/Pinhead/master/client/src/pinhead.png",
-        "bannerRGBA": "rgba(256,256,256,0.9)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "COVID19 Stats Tracker",
@@ -35,7 +56,7 @@
         "source": "https://github.com/NoahSylwester/COVID19Stats",
         "live": "https://covidstattracker.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/COVID19Stats/master/screenshot.png",
-        "bannerRGBA": "rgba(256,256,256,0.8)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "chatcat",
@@ -45,7 +66,7 @@
         "live": "https://chatcat.azurewebsites.net/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/chatcat.png",
         "thumbnail": "https://i7.uihere.com/icons/280/167/689/cat-77d66f0a4a50e34849199b98f127c5b4.png",
-        "bannerRGBA": "rgba(256,256,256,0.8)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "Monster News",
@@ -54,7 +75,7 @@
         "source": "https://github.com/NoahSylwester/NewsScraper",
         "live": "https://monster-news.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_11_20_2019_6-02-19%20PM.png",
-        "bannerRGBA": "rgba(256,256,256,0.8)"
+        "bannerRGBA": "rgba(256,256,256,0.9)"
     },
     {
         "title": "Image Clicker",
@@ -63,7 +84,7 @@
         "source": "https://github.com/NoahSylwester/Image_Clicker",
         "live": "https://noahsylwester.github.io/Image_Clicker",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/FireShot%20Capture%20001%20-%20Image%20Clicker%20-%20noahsylwester.github.io.png",
-        "bannerRGBA": "rgba(256,256,256,0.8)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "Monstrous",
@@ -73,7 +94,7 @@
         "live": "https://monstrous.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_10_10_2019_10-56-06%20PM.png",
         "thumbnail": "https://github.com/NoahSylwester/FriendFinder/blob/master/assets/images/monster.png?raw=true",
-        "bannerRGBA": "rgba(256,256,256,0.8)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "RPS Online",
@@ -82,7 +103,7 @@
         "source": "https://github.com/NoahSylwester/RPS-Multiplayer",
         "live": "https://noahsylwester.github.io/RPS-Multiplayer",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_9_17_2019_5-57-35%20PM.png",
-        "bannerRGBA": "rgba(256,256,256,0.9)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "Cattle vs Mechs",
@@ -91,7 +112,7 @@
         "source": "https://github.com/NoahSylwester/unit-4-game",
         "live": "https://noahsylwester.github.io/unit-4-game",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_9_17_2019_5-57-10%20PM.png",
-        "bannerRGBA": "rgba(256,256,256,0.8)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "Bamazon Storefront",
@@ -99,7 +120,7 @@
         "description": "A command line tool to manipulate a storefront's SQL database",
         "source": "https://github.com/noahsylwester/bamazon",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/Screen%20Shot%202019-10-01%20at%208.06.16%20PM.png",
-        "bannerRGBA": "rgba(256,256,256,0.8)"
+        "bannerRGBA": "rgba(256,256,256,0.95)"
     },
     {
         "title": "Squirrel Defense",
@@ -108,6 +129,6 @@
         "source": "https://scratch.mit.edu/projects/317874867/editor/",
         "live": "https://scratch.mit.edu/projects/317874867/",
         "image": "https://cdn2.scratch.mit.edu/get_image/project/317874867_480x360.png",
-        "bannerRGBA": "rgba(256,256,256,0.8)"
+        "bannerRGBA": "rgba(256,256,256,0.85)"
     }
 ]

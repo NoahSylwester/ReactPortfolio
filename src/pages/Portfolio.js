@@ -93,11 +93,18 @@ export default function Portfolio(props) {
             setIndex(0);
             setMatchedPortfolioItems(filteredResults)
         }
+        else {
+            handleReset();
+        }
     }
 
     const handleReset = () => {
         setMatchedPortfolioItems(portfolioItems)
     }
+
+    useEffect(() => {
+        handleFilter()
+    }, [filterQuery])
 
     return (
         <div style={styles.page}>
@@ -106,12 +113,12 @@ export default function Portfolio(props) {
                 <p style={{ marginBottom: 5 }}>Filter by technology</p>
                 <div>
                     <FilterInput onChange={event => setFilterQuery(event.target.value)}>
-                        <option value=''>Select one</option>
+                        <option value=''>All</option>
                         {/* sort and return available technologies */}
                         {proficiencies.sort((a,b) => a.technology.toUpperCase() > b.technology.toUpperCase() ? 1 : -1).map(proficiency => proficiency.inProject ? <option key={"option" + proficiency.technology} value={proficiency.technology}>{proficiency.technology}</option> : null)}
                     </FilterInput>
-                    <FilterButton onClick={handleFilter}>Go</FilterButton>
-                    <FilterButton onClick={handleReset}>Undo</FilterButton>
+                    {/* <FilterButton onClick={handleFilter}>Go</FilterButton> */}
+                    {/* <FilterButton onClick={handleReset}>Undo</FilterButton> */}
                 </div>
             </div>
             <div style={isDesktop ? styles.pageBodyDesktop : styles.pageBodyMobile}>
@@ -144,6 +151,7 @@ const styles = {
     page: {
         backgroundColor: 'white',
         height: '100%',
+        overflow: 'scroll'
     },
     pageBodyDesktop: {
         padding: "10px 100px 0px 100px",
@@ -153,6 +161,7 @@ const styles = {
         alignItems: "center"
     },
     pageBodyMobile: {
+        background: "linear-gradient(white, lightgrey)",
         padding: "10px 20px 0px 20px",
         display: "flex",
         flexDirection: "column",

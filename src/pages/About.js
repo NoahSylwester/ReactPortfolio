@@ -48,7 +48,7 @@ export default function About(props) {
                         isDesktop
                         ?
                         // desktop view
-                        proficiencies.map((item, i) => {
+                        proficiencies.sort((a,b) => a.technology.localeCompare(b.technology)).map((item, i) => {
 
                             return (
                             item.proficient
@@ -120,6 +120,9 @@ const stylesDesktop = {
     imgContainer: {
         height: "300px",
         width: "300px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     },
     proficiencies: {
         width: "70%",
@@ -138,6 +141,7 @@ const stylesMobile = {
     page: {
         backgroundColor: 'white',
         height: "100%",
+        overflow: 'scroll'
     },
     pageBody: {
         padding: "100px 40px 100px 50px",
@@ -155,6 +159,9 @@ const stylesMobile = {
     imgContainer: {
         height: "300px",
         width: "300px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     },
     proficiencies: {
         width: "80%",

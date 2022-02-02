@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Thumbnail = styled.div`
     width: 50px;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 300px;
     background-image: url(${props => props.item.thumbnail || props.item.image});
     background-size: cover;
     background-position: center;

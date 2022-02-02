@@ -8,17 +8,17 @@
         "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.planning&hl=en_US&gl=US",
         "image": "planning.png",
         "bannerRGBA": "rgba(256,256,256,0.97)",
-        "thumbnail": "https://play-lh.googleusercontent.com/d9b1W1Pw7HMYNlwWZYe6YBNMCcG_sxdFSlDqUnuNqAm-ojOwhmyC0ShtYru6M3rFFw=s180-rw"
+        "thumbnail": "planning-icon.svg"
     },
     {
         "title": "Music Stand",
         "technologies": ["TypeScript", "Cordova", "Angular", "Firebase", "Ionic"],
-        "description": "An iOS/Android/web app for displaying sheet music, featuring a rich editor and tight integrations with other services",
+        "description": "An iOS/Android app for displaying sheet music, featuring a rich editor and tight integrations with other services",
         "appStore": "https://apps.apple.com/us/app/music-stand-by-we/id1511797596",
         "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.musicstand&hl=en_US&gl=US", 
         "image": "ms.png",
         "bannerRGBA": "rgba(256,256,256,0.97)",
-        "thumbnail": "https://play-lh.googleusercontent.com/I7F4kFLAbw8wNAV8dZsF8vrDXBqaVZHAR3NGel_ASsDFc2zdFBh0Q_HZDmffYx2F3qM=s180-rw"
+        "thumbnail": "music-stand-icon.svg"
     },
     {
         "title": "StoryBoard",
@@ -34,7 +34,7 @@
         "technologies": ["JavaScript", "React", "React Native", "Expo", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
         "description": "A React Native mobile app for PNW hikers and explorers",
         "source": "https://github.com/NoahSylwester/StumpAroundClient",
-        "live": "https://expo.io/@noahsylwester/StumpAround",
+        "liveOFF": "https://expo.io/@noahsylwester/StumpAround",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/Screen%20Shot%20stumparound.png",
         "thumbnail": "https://d1wp6m56sqw74a.cloudfront.net/~assets/d2222ce3167fd6782cb1144317e09c86",
         "bannerRGBA": "rgba(256,256,256,0.95)"

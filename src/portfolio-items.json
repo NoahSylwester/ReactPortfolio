@@ -2,7 +2,7 @@
     {
         "title": "Planning",
         "technologies": ["TypeScript", "Cordova", "Vue", "Firebase", "BootstrapVue"],
-        "description": "An iOS/Android/web app for scheduling religious and musical events, featuring tight integrations with other services and apps plus a full messenger component",
+        "description": "An iOS/Android/web Vue app for scheduling religious and musical events, featuring tight integrations with other services and apps plus a full messenger component",
         "live": "https://planning.worshipextreme.com/app",
         "appStore": "https://apps.apple.com/us/app/planning-by-we/id1586693784",
         "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.planning&hl=en_US&gl=US",
@@ -13,7 +13,7 @@
     {
         "title": "Music Stand",
         "technologies": ["TypeScript", "Cordova", "Angular", "Firebase", "Ionic"],
-        "description": "An iOS/Android app for displaying sheet music, featuring a rich editor and tight integrations with other services",
+        "description": "An iOS/Android Angular app for displaying sheet music, featuring a rich editor and tight integrations with other services",
         "appStore": "https://apps.apple.com/us/app/music-stand-by-we/id1511797596",
         "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.musicstand&hl=en_US&gl=US", 
         "image": "ms.png",
@@ -23,7 +23,7 @@
     {
         "title": "StoryBoard",
         "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
-        "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing stories",
+        "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing fiction",
         "source": "https://github.com/NoahSylwester/Lore",
         "live": "https://storyboard-online.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/splash.png",

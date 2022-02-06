@@ -21,15 +21,6 @@
         "thumbnail": "music-stand-icon.svg"
     },
     {
-        "title": "StoryBoard",
-        "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
-        "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing stories",
-        "source": "https://github.com/NoahSylwester/Lore",
-        "live": "https://storyboard-online.herokuapp.com/",
-        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/splash.png",
-        "bannerRGBA": "rgba(256,256,256,0.97)"
-    },
-    {
         "title": "StumpAround",
         "technologies": ["JavaScript", "React", "React Native", "Expo", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
         "description": "A React Native mobile app for PNW hikers and explorers",
@@ -38,6 +29,15 @@
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/Screen%20Shot%20stumparound.png",
         "thumbnail": "https://d1wp6m56sqw74a.cloudfront.net/~assets/d2222ce3167fd6782cb1144317e09c86",
         "bannerRGBA": "rgba(256,256,256,0.95)"
+    },
+    {
+        "title": "StoryBoard",
+        "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
+        "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing stories",
+        "source": "https://github.com/NoahSylwester/Lore",
+        "live": "https://storyboard-online.herokuapp.com/",
+        "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/splash.png",
+        "bannerRGBA": "rgba(256,256,256,0.97)"
     },
     {
         "title": "Pinhead",

@@ -6,7 +6,8 @@ const Thumbnail = styled.div`
     height: 50px;
     border-radius: 300px;
     background-image: url(${props => props.item.thumbnail || props.item.image});
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: ${props => props.item.thumbnail && props.item.title !== 'StumpAround' ? '90%': 'cover'};
     background-position: center;
     border: ${props => props.isCurrentIndex ? "1px solid black" : "1px solid white"};
     box-shadow: ${props => props.isCurrentIndex ? "0px 2px 7px black" : "0px 2px 7px lightgrey"};

@@ -8,7 +8,8 @@
         "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.planning&hl=en_US&gl=US",
         "image": "planning.png",
         "bannerRGBA": "rgba(256,256,256,0.97)",
-        "thumbnail": "planning-icon.svg"
+        "thumbnail": "planning-icon.svg",
+        "show": true
     },
     {
         "title": "Music Stand",
@@ -18,7 +19,28 @@
         "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.musicstand&hl=en_US&gl=US", 
         "image": "ms.png",
         "bannerRGBA": "rgba(256,256,256,0.97)",
-        "thumbnail": "music-stand-icon.svg"
+        "thumbnail": "music-stand-icon.svg",
+        "show": true
+    },
+    {
+        "title": "WorshipTools Media Store",
+        "technologies": ["TypeScript", "Vue", "Firebase"],
+        "description": "A Vue-based, clientside-rendered media store embedded within a PHP-based, serverside-rendered website page.",
+        "live": "https://www.worshiptools.com/media",
+        "image": "media-store-screenshot.png",
+        "bannerRGBA": "rgba(256,256,256,0.97)",
+        "thumbnail": "worship-tools-logo-for-light.svg",
+        "show": true
+    },
+    {
+        "title": "Presenter",
+        "technologies": ["JavaScript", "Cordova", "Electron", "AngularJS", "Firebase"],
+        "description": "A desktop app for displaying and controlling slide presentations",
+        "info": "https://www.worshiptools.com/en-us/presenter", 
+        "image": "presenter-screenshot.png",
+        "bannerRGBA": "rgba(256,256,256,0.97)",
+        "thumbnail": "presenter-icon.svg",
+        "show": true
     },
     {
         "title": "StumpAround",
@@ -28,7 +50,8 @@
         "liveOFF": "https://expo.io/@noahsylwester/StumpAround",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/Screen%20Shot%20stumparound.png",
         "thumbnail": "https://d1wp6m56sqw74a.cloudfront.net/~assets/d2222ce3167fd6782cb1144317e09c86",
-        "bannerRGBA": "rgba(256,256,256,0.95)"
+        "bannerRGBA": "rgba(256,256,256,0.95)",
+        "show": true
     },
     {
         "title": "StoryBoard",
@@ -37,7 +60,8 @@
         "source": "https://github.com/NoahSylwester/Lore",
         "live": "https://storyboard-online.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/splash.png",
-        "bannerRGBA": "rgba(256,256,256,0.97)"
+        "bannerRGBA": "rgba(256,256,256,0.97)",
+        "show": false
     },
     {
         "title": "Pinhead",
@@ -47,16 +71,18 @@
         "live": "https://pinhead.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/pinhead.png",
         "thumbnail": "https://raw.githubusercontent.com/NoahSylwester/Pinhead/master/client/src/pinhead.png",
-        "bannerRGBA": "rgba(256,256,256,0.95)"
+        "bannerRGBA": "rgba(256,256,256,0.95)",
+        "show": true
     },
     {
         "title": "COVID19 Stats Tracker",
         "technologies": ["TypeScript","Angular", "D3.js", "Express.js", "Node.js"],
-        "description": "An app to track COVID19 data made with Angular and D3",
+        "description": "A simple app to track COVID19 data made with Angular and D3",
         "source": "https://github.com/NoahSylwester/COVID19Stats",
         "live": "https://covidstattracker.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/COVID19Stats/master/screenshot.png",
-        "bannerRGBA": "rgba(256,256,256,0.95)"
+        "bannerRGBA": "rgba(256,256,256,0.95)",
+        "show": true
     },
     {
         "title": "chatcat",
@@ -66,7 +92,8 @@
         "live": "https://chatcat.azurewebsites.net/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/chatcat.png",
         "thumbnail": "https://i7.uihere.com/icons/280/167/689/cat-77d66f0a4a50e34849199b98f127c5b4.png",
-        "bannerRGBA": "rgba(256,256,256,0.95)"
+        "bannerRGBA": "rgba(256,256,256,0.95)",
+        "show": true
     },
     {
         "title": "Monster News",
@@ -84,7 +111,8 @@
         "source": "https://github.com/NoahSylwester/Image_Clicker",
         "live": "https://noahsylwester.github.io/Image_Clicker",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/FireShot%20Capture%20001%20-%20Image%20Clicker%20-%20noahsylwester.github.io.png",
-        "bannerRGBA": "rgba(256,256,256,0.95)"
+        "bannerRGBA": "rgba(256,256,256,0.95)",
+        "show": true
     },
     {
         "title": "Monstrous",
@@ -103,7 +131,8 @@
         "source": "https://github.com/NoahSylwester/RPS-Multiplayer",
         "live": "https://noahsylwester.github.io/RPS-Multiplayer",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_9_17_2019_5-57-35%20PM.png",
-        "bannerRGBA": "rgba(256,256,256,0.95)"
+        "bannerRGBA": "rgba(256,256,256,0.95)",
+        "show": true
     },
     {
         "title": "Cattle vs Mechs",
@@ -112,7 +141,8 @@
         "source": "https://github.com/NoahSylwester/unit-4-game",
         "live": "https://noahsylwester.github.io/unit-4-game",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_9_17_2019_5-57-10%20PM.png",
-        "bannerRGBA": "rgba(256,256,256,0.95)"
+        "bannerRGBA": "rgba(256,256,256,0.95)",
+        "show": true
     },
     {
         "title": "Bamazon Storefront",
@@ -120,7 +150,8 @@
         "description": "A command line tool to manipulate a storefront's SQL database",
         "source": "https://github.com/noahsylwester/bamazon",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/Screen%20Shot%202019-10-01%20at%208.06.16%20PM.png",
-        "bannerRGBA": "rgba(256,256,256,0.95)"
+        "bannerRGBA": "rgba(256,256,256,0.95)",
+        "show": true
     },
     {
         "title": "Squirrel Defense",
@@ -129,6 +160,7 @@
         "source": "https://scratch.mit.edu/projects/317874867/editor/",
         "live": "https://scratch.mit.edu/projects/317874867/",
         "image": "https://cdn2.scratch.mit.edu/get_image/project/317874867_480x360.png",
-        "bannerRGBA": "rgba(256,256,256,0.85)"
+        "bannerRGBA": "rgba(256,256,256,0.85)",
+        "show": true
     }
 ]

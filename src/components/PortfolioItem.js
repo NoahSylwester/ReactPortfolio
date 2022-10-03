@@ -5,7 +5,7 @@ import SVGLoadingIcon from '../components/SVGLoadingIcon';
 
 const PortfolioItemWrapper = styled.div`
     background-color: white;
-    box-shadow: inset 0px 1px 5px lightgrey;
+    box-shadow: inset ${props => props.mobile ? "0px 1px 50px darkgrey" : "0px 1px 10px lightgrey"};
     width: ${props => props.mobile ? "100%" : "80%"};
     min-width: 200px;
     height: 50vh;

@@ -40,6 +40,14 @@
         "proficient": true
     },
     {
+        "technology": "Electron",
+        "type": "Framework",
+        "color": "black",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/240px-Electron_Software_Framework_Logo.svg.png",
+        "inProject": true,
+        "proficient": false
+    },
+    {
         "technology": "Ionic",
         "type": "Framework",
         "color": "black",
@@ -78,6 +86,14 @@
         "icon": "https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg",
         "inProject": true,
         "proficient": true
+    },
+    {
+        "technology": "AngularJS",
+        "type": "Framework",
+        "color": "black",
+        "icon": "https://material.angularjs.org/latest/img/logo.svg",
+        "inProject": true,
+        "proficient": false
     },
     {
         "technology": "Vue",

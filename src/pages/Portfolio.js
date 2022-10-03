@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar";
-import portfolioItems from '../portfolio-items.json';
+import rawPortfolioItems from '../portfolio-items.json';
 import proficiencies from '../proficiencies.json';
 import PortfolioItem from '../components/PortfolioItem';
 import PortfolioItemThumbnails from '../components/PortfolioItemThumbnails';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
+import { RiArrowRightSLine, RiArrowLeftSLine } from 'react-icons/ri';
 
 const Arrow = styled.div`
+    color: grey;
+    line-height: 0;
     cursor: pointer;
-    padding: 5px 9px 5px 9px;
+    padding: 9px;
     border-radius: 30px;
     background-color: white;
     box-shadow: 0px 1px 3px lightgrey;
@@ -61,8 +64,9 @@ const FilterButton = styled.button`
     }
 `
 
-export default function Portfolio(props) {
+const portfolioItems = rawPortfolioItems.filter(p => p.show);
 
+export default function Portfolio(props) {
     const [doneLoading, setDoneLoading] = useState(false)
     const [index, setIndex] = useState(0);
     const [matchedPortfolioItems, setMatchedPortfolioItems] = useState(portfolioItems);
@@ -126,9 +130,9 @@ export default function Portfolio(props) {
                 isDesktop
                     ?
                 <>
-                    {doneLoading ? <Arrow onClick={() => handleArrowClick('back')}>←</Arrow> : <></>}
+                    {doneLoading ? <Arrow onClick={() => handleArrowClick('back')}><RiArrowLeftSLine/></Arrow> : <></>}
                     <PortfolioItem indexer={{ index, setIndex, length: matchedPortfolioItems.length }} item={matchedPortfolioItems[index]} key={matchedPortfolioItems[index]} setDoneLoading={setDoneLoading}/>
-                    {doneLoading ? <Arrow onClick={() => handleArrowClick('forward')}>→</Arrow> : <></>}
+                    {doneLoading ? <Arrow onClick={() => handleArrowClick('forward')}><RiArrowRightSLine/></Arrow> : <></>}
                 </>
                     :
                 <>

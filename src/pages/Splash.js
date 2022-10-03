@@ -9,7 +9,7 @@ const fadeInAnimation = keyframes`${fadeIn}`;
 
 const shadowExpand = keyframes`
     0% {
-        box-shadow: 15px 10px 100px rgba(255,251,205,0.6);
+        box-shadow: 15px 10px 10px rgba(255,251,205,0.6);
         color: lemonchiffon;
         background-color: rgba(0,0,0,0.2);
     }
@@ -21,7 +21,7 @@ const shadowExpand = keyframes`
 `
 
 const Reveal = styled.div`
-    animation: 2s ${fadeInAnimation};
+    animation: 0.5s ${fadeInAnimation};
     color: lemonchiffon;
     height: 100%;
     width: 100%;
@@ -67,7 +67,7 @@ const Billboard = styled.a`
     font-weight: bold;
     z-index: 5;
     :hover {
-        animation: 4s ${shadowExpand};
+        animation: 0.4s ${shadowExpand};
         color: white;
         box-shadow: 15px 10px 10px 1000px rgba(256,256,256,0.9);
         background-color: rgba(0,0,0,0.4);
@@ -106,7 +106,7 @@ export default function Splash(props) {
                 </Billboard>
                 <BackgroundImage
                     src={backgroundImageSrc}
-                     />
+                />
             </Reveal>
             }
         </div>

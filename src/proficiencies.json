@@ -132,7 +132,7 @@
         "type": "Templating Engine",
         "color": "black",
         "icon": "https://i0.wp.com/blog.fossasia.org/wp-content/uploads/2017/07/handlebars-js.png?fit=500%2C500&ssl=1",
-        "inProject": true,
+        "inProject": false,
         "proficient": false
     },
     {
@@ -140,7 +140,7 @@
         "type": "Library",
         "color": "black",
         "icon": "https://avatars2.githubusercontent.com/u/7230330?s=400&v=4",
-        "inProject": true,
+        "inProject": false,
         "proficient": false
     },
     {

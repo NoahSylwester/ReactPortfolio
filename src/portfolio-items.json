@@ -1,7 +1,17 @@
 [
     {
+        "title": "SongSelect Sheet Music Renderer",
+        "technologies": ["JavaScript", "C++", "Vue", "Node.js", "WebAssembly"],
+        "description": "Server-side and client-side rendering engine extensively adapted from open source code library Verovio for business-specific requirements. Replaced third-party rendering solution for 85,000+ individual song items, saving business approx. $200,000 per year.",
+        "live": "https://songselect.ccli.com/",
+        "image": "verovio.png",
+        "bannerRGBA": "rgba(256,256,256,0.97)",
+        "thumbnail": "songselect-logo.png",
+        "show": true
+    },
+    {
         "title": "Planning",
-        "technologies": ["TypeScript", "Cordova", "Vue", "Firebase", "BootstrapVue"],
+        "technologies": ["TypeScript", "Cordova", "Vue", "NoSQL", "Firebase", "BootstrapVue"],
         "description": "An iOS/Android/web Vue app for scheduling religious and musical events, featuring tight integrations with other services and apps plus a full messenger component",
         "live": "https://planning.worshipextreme.com/app",
         "appStore": "https://apps.apple.com/us/app/planning-by-we/id1586693784",
@@ -13,7 +23,7 @@
     },
     {
         "title": "Music Stand",
-        "technologies": ["TypeScript", "Cordova", "Angular", "Firebase", "Ionic"],
+        "technologies": ["TypeScript", "Cordova", "Angular", "NoSQL", "Firebase", "Ionic"],
         "description": "An iOS/Android Angular app for displaying sheet music, featuring a rich editor and tight integrations with other services",
         "appStore": "https://apps.apple.com/us/app/music-stand-by-we/id1511797596",
         "playStore": "https://play.google.com/store/apps/details?id=com.worshipextreme.musicstand&hl=en_US&gl=US", 
@@ -24,7 +34,7 @@
     },
     {
         "title": "WorshipTools Media Store",
-        "technologies": ["TypeScript", "Vue", "Firebase"],
+        "technologies": ["TypeScript", "Vue", "NoSQL", "Firebase"],
         "description": "A Vue-based, clientside-rendered media store embedded within a PHP-based, serverside-rendered website page.",
         "live": "https://www.worshiptools.com/media",
         "image": "media-store-screenshot.png",
@@ -34,7 +44,7 @@
     },
     {
         "title": "Presenter",
-        "technologies": ["JavaScript", "Cordova", "Electron", "AngularJS", "Firebase"],
+        "technologies": ["JavaScript", "Cordova", "Electron", "AngularJS", "NoSQL", "Firebase"],
         "description": "A desktop app for displaying and controlling slide presentations",
         "info": "https://www.worshiptools.com/en-us/presenter", 
         "image": "presenter-screenshot.png",
@@ -44,7 +54,7 @@
     },
     {
         "title": "StumpAround",
-        "technologies": ["JavaScript", "React", "React Native", "Expo", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
+        "technologies": ["JavaScript", "React", "React Native", "Expo", "MongoDB", "NoSQL", "Mongoose", "Express.js", "Node.js", "JWT"],
         "description": "A React Native mobile app for PNW hikers and explorers",
         "source": "https://github.com/NoahSylwester/StumpAroundClient",
         "liveOFF": "https://expo.io/@noahsylwester/StumpAround",
@@ -55,7 +65,7 @@
     },
     {
         "title": "StoryBoard",
-        "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
+        "technologies": ["JavaScript", "React", "MongoDB", "NoSQL", "Mongoose", "Express.js", "Node.js", "JWT"],
         "description": "A user-secured React app built with mongoDB and a content management system for sharing and discussing stories",
         "source": "https://github.com/NoahSylwester/Lore",
         "live": "https://storyboard-online.herokuapp.com/",
@@ -65,14 +75,14 @@
     },
     {
         "title": "Pinhead",
-        "technologies": ["JavaScript", "React", "MongoDB", "Mongoose", "Express.js", "Node.js", "JWT"],
+        "technologies": ["JavaScript", "React", "MongoDB", "NoSQL", "Mongoose", "Express.js", "Node.js", "JWT"],
         "description": "A tool for attaching data to images, built with React, express.js, mongoDB, and Canvas",
         "source": "https://github.com/NoahSylwester/Pinhead",
         "live": "https://pinhead.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/pinhead.png",
         "thumbnail": "https://raw.githubusercontent.com/NoahSylwester/Pinhead/master/client/src/pinhead.png",
         "bannerRGBA": "rgba(256,256,256,0.95)",
-        "show": true
+        "show": false
     },
     {
         "title": "COVID19 Stats Tracker",

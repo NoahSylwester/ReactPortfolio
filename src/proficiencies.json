@@ -100,7 +100,7 @@
         "type": "Framework",
         "color": "black",
         "icon": "https://cdn.iconscout.com/icon/free/png-512/vue-282497.png",
-        "inProject": false,
+        "inProject": true,
         "proficient": true
     },
     {
@@ -176,6 +176,14 @@
         "proficient": true
     },
     {
+        "technology": "NoSQL",
+        "type": "Database Query Language",
+        "color": "black",
+        "icon": "https://cdn-icons-png.flaticon.com/512/657/657695.png",
+        "inProject": true,
+        "proficient": true
+    },
+    {
         "technology": "MySQL",
         "type": "Database",
         "color": "black",
@@ -204,7 +212,7 @@
         "type": "Protocol",
         "color": "black",
         "icon": "https://jwt.io/img/pic_logo.svg",
-        "inProject": true,
+        "inProject": false,
         "proficient": false
     },
     {
@@ -252,6 +260,38 @@
         "type": "CSS Framework",
         "color": "black",
         "icon": "https://bootstrap-vue.org/_nuxt/icons/icon_512x512.67aef2.png",
+        "inProject": true,
+        "proficient": false
+    },
+    {
+        "technology": "Swift",
+        "type": "Programming Language",
+        "color": "black",
+        "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968371.png",
+        "inProject": false,
+        "proficient": true
+    },
+    {
+        "technology": "SwiftUI",
+        "type": "Framework",
+        "color": "black",
+        "icon": "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-128x128_2x.png",
+        "inProject": false,
+        "proficient": true
+    },
+    {
+        "technology": "WebAssembly",
+        "type": "Programming Language",
+        "color": "black",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WebAssembly_Logo.svg/1200px-WebAssembly_Logo.svg.png",
+        "inProject": true,
+        "proficient": false
+    },
+    {
+        "technology": "C++",
+        "type": "Programming Language",
+        "color": "black",
+        "icon": "https://cdn-icons-png.flaticon.com/512/6132/6132222.png",
         "inProject": true,
         "proficient": false
     }

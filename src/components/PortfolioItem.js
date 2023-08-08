@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from "styled-components";
 import proficiencies from '../proficiencies.json';
 import SVGLoadingIcon from '../components/SVGLoadingIcon';
+import { useMediaQuery } from 'react-responsive';
 
 const PortfolioItemWrapper = styled.div`
     background-color: white;
@@ -17,6 +18,10 @@ const PortfolioItemWrapper = styled.div`
     background-image: url(${props => props.item.image});
     background-size: cover;
     background-position: center 0px;
+    ${props => props.isDesktop ? `` : `
+        justify-content: flex-end;
+        border: 2px grey solid;
+    `}
 `
 
 const Banner = styled.div`
@@ -46,6 +51,14 @@ const Banner = styled.div`
             box-shadow: inset 1px 2px 7px lightgrey;
         }
     }
+    ${props => props.isDesktop ? `` : `
+        h1 {
+            font-size: 1em;
+        }
+        p, div {
+            font-size: 0.75em;
+        }
+    `}
 `
 
 const TechnologyIcon = styled.img`
@@ -76,6 +89,10 @@ export default function PortfolioItem(props) {
 
     const [loading, setLoading] = useState(true);
     const [imageSrc, setImageSrc] = useState('');
+
+    const isDesktop = useMediaQuery({
+        query: '(min-width: 755px)'
+      })
     
     //load in background image
     const imageToLoad = new Image();
@@ -112,10 +129,10 @@ export default function PortfolioItem(props) {
         ?
         <SVGLoadingIcon duration={0.5}/>
         :
-        <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image: imageSrc, bannerRGBA }}>
-            <Banner item={{ image, bannerRGBA }}>
+        <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image: imageSrc, bannerRGBA }} isDesktop={isDesktop}>
+            <Banner item={{ image, bannerRGBA }} isDesktop={isDesktop}>
                 <h1 style={{textAlign: "center"}}>{title}</h1>
-                <div style={{display: 'flex', flexDirection: 'row'}}>{technologies.map(technology => {
+                <div style={{display: 'flex', flexDirection: 'row'}}>{technologies.sort((a,b) => a.localeCompare(b)).map(technology => {
                     return (
                     <TechnologyIconWrapper name={technology} key={technology + title}>
                         <TechnologyIcon src={proficiencies.filter(proficiency => proficiency.technology === technology)[0].icon} style={{ height: "1rem", width: "1rem", margin: "3px 5px 0 5px" }}/>

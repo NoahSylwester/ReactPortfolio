@@ -20,6 +20,9 @@
     "react-transition-group": "^4.4.1",
     "styled-components": "^5.1.0"
   },
+  "engines" : { 
+    "node" : "16.x"
+  },
   "scripts": {
     "start": "node server.js",
     "build": "react-scripts build",

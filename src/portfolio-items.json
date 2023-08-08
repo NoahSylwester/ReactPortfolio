@@ -107,12 +107,13 @@
     },
     {
         "title": "Monster News",
-        "technologies": ["JavaScript", "Handlebars", "cheerio.js", "MongoDB", "Mongoose", "Express.js", "Node.js"],
+        "technologies": ["JavaScript", "Handlebars", "cheerio.js", "MongoDB", "NoSQL", "Mongoose", "Express.js", "Node.js"],
         "description": "A news aggregator for monster stories built using cheerio.js",
         "source": "https://github.com/NoahSylwester/NewsScraper",
         "live": "https://monster-news.herokuapp.com/",
         "image": "https://raw.githubusercontent.com/NoahSylwester/Portfolio/master/assets/images/scrnli_11_20_2019_6-02-19%20PM.png",
-        "bannerRGBA": "rgba(256,256,256,0.9)"
+        "bannerRGBA": "rgba(256,256,256,0.9)",
+        "show": false
     },
     {
         "title": "Image Clicker",

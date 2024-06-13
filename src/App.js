@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 
 import Splash from './pages/Splash';
-import About from './pages/About';
-import Portfolio from './pages/Portfolio';
+import NewAbout from './pages/NewAbout';
+import NewPortfolio from './pages/NewPortfolio';
 
 const routes = [
   { path: '/', name: 'Splash', Component: Splash },
-  { path: '/about', name: 'About', Component: About },
-  { path: '/portfolio', name: 'Portfolio', Component: Portfolio },
+  { path: '/about', name: 'About', Component: NewAbout },
+  { path: '/portfolio', name: 'Portfolio', Component: NewPortfolio },
 ]
 
 export default function App() {
@@ -17,8 +17,8 @@ export default function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={Splash} />
-        <Route exact path={"/about"} component={About} />
-        <Route exact path={"/portfolio"} component={Portfolio} />
+        <Route exact path={"/about"} component={NewAbout} />
+        <Route exact path={"/portfolio"} component={NewPortfolio} />
       </div>
     </Router>
   )

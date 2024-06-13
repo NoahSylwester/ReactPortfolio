@@ -123,7 +123,7 @@
         "technology": "Express.js",
         "type": "Runtime Engine",
         "color": "black",
-        "icon": "https://bs-uploads.toptal.io/blackfish-uploads/components/skill_page/content/logo_file/logo/195562/express_js-161052138fa79136c0474521906b55e2.png",
+        "icon": "https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png",
         "inProject": true,
         "proficient": false
     },
@@ -172,7 +172,7 @@
         "type": "Database Query Language",
         "color": "black",
         "icon": "https://cdn2.iconfinder.com/data/icons/programming-50/64/206_programming-sql-data-database-512.png",
-        "inProject": true,
+        "inProject": false,
         "proficient": true
     },
     {
@@ -219,7 +219,7 @@
         "technology": "Scratch",
         "type": "Programming Language",
         "color": "black",
-        "icon": "https://sites.google.com/site/lishakilltech/_/rsrc/1520861004111/scratch/ScratchCat-Large.png?height=320&width=320",
+        "icon": "https://seeklogo.com/images/S/scratch-cat-logo-7F652C6253-seeklogo.com.png",
         "inProject": true,
         "proficient": false
     },

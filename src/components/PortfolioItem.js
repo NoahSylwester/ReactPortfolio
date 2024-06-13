@@ -9,7 +9,7 @@ const PortfolioItemWrapper = styled.div`
     box-shadow: inset ${props => props.mobile ? "0px 1px 50px darkgrey" : "0px 1px 10px lightgrey"};
     width: ${props => props.mobile ? "100%" : "80%"};
     min-width: 200px;
-    height: 50vh;
+    height: 60vh;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -72,7 +72,7 @@ const TechnologyIconWrapper = styled.div`
     :hover {
         ::after {
             content: "${props => props.name}";
-            font-size: 0.5rem;
+            font-size: 0.75rem;
             position: absolute;
             white-space: nowrap;
             bottom: -10px;
@@ -135,7 +135,7 @@ export default function PortfolioItem(props) {
                 <div style={{display: 'flex', flexDirection: 'row'}}>{technologies.sort((a,b) => a.localeCompare(b)).map(technology => {
                     return (
                     <TechnologyIconWrapper name={technology} key={technology + title}>
-                        <TechnologyIcon src={proficiencies.filter(proficiency => proficiency.technology === technology)[0].icon} style={{ height: "1rem", width: "1rem", margin: "3px 5px 0 5px" }}/>
+                        <TechnologyIcon src={proficiencies.filter(proficiency => proficiency.technology === technology)[0].icon} style={{ height: "1.5rem", width: "1.5rem", margin: "3px 5px 0 5px" }}/>
                     </TechnologyIconWrapper>
                     )
                 })}</div>

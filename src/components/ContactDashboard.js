@@ -11,11 +11,12 @@ const Dashboard = styled.div`
     align-items: center;
 `
 const ContactIconWrapper = styled.a`
+    position: relative;
     margin: 10px;
     height: 50px;
     width: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
@@ -25,6 +26,16 @@ const ContactIconWrapper = styled.a`
     :hover {
         box-shadow: inset 0 0 1px lightgrey;
         background-color: rgba(250,250,250,1);
+        ::after {
+            content: "${props => props.hover}";
+            color: black;
+            font-size: 0.75rem;
+            position: absolute;
+            white-space: nowrap;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
     }
     :active {
         box-shadow: inset 0 0 5px lightgrey;
@@ -58,24 +69,28 @@ export default function ContactDashboard(props) {
 
     return (
         <Dashboard>
-            {contactItems.map((item, i) => {
+            <div style={isDesktop ? styles.flexColumn : styles.flexRow}>
+                {contactItems.map((item, i) => {
                 return (
-                    <div key={i + "contactdash"} style={{textAlign:"center"}}>
-                    {
-                    isDesktop
-                    ?
-                        <ContactLabel>{item.name}</ContactLabel>
-                    :
-                        <></>
-                    }
-                    <ContactIconWrapper key={i + "contactwrapper"} target="_blank" href={item.link} name={item.name}>
-                        <ContactIcon src={item.iconPath} />
-                    </ContactIconWrapper>
+                    <div key={i + "contactdash"} style={{textAlign:"center", display: 'flex', alignItems: 'center'}}>
+                        <ContactIconWrapper key={i + "contactwrapper"} target="_blank" href={item.link} name={item.name} hover={item.name}>
+                            <ContactIcon src={item.iconPath} />
+                        </ContactIconWrapper>
                     </div>
                     )
                 })}
+            </div>
         </Dashboard>
     )
 }
 
-
+const styles = {
+    flexColumn: {
+        display: 'flex',
+        flexDirection: 'column'
+    },
+    flexRow: {
+        display: 'flex',
+        flexDirection: 'row'
+    }
+}

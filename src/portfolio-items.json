@@ -22,7 +22,7 @@
         "show": true
     },
     {
-        "title": "Music Stand",
+        "title": "Charts",
         "technologies": ["TypeScript", "Cordova", "Angular", "NoSQL", "Firebase", "Ionic"],
         "description": "An iOS/Android Angular app for displaying sheet music, featuring a rich editor and tight integrations with other services",
         "appStore": "https://apps.apple.com/us/app/music-stand-by-we/id1511797596",

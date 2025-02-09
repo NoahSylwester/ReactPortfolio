@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import proficiencies from '../proficiencies.json';
 import SVGLoadingIcon from '../components/SVGLoadingIcon';
 import { useMediaQuery } from 'react-responsive';
@@ -15,7 +15,7 @@ const PortfolioItemWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(${props => props.item.image});
+    ${props => props.item.loading ? `background: white;` : `animation: fade-in-animation 0.15s ease-out; background-image: url(${props.item.image});` }
     background-size: cover;
     background-position: center 0px;
     ${props => props.isDesktop ? `` : `
@@ -125,11 +125,7 @@ export default function PortfolioItem(props) {
     }, [index, length])
 
     return (
-        loading
-        ?
-        <SVGLoadingIcon duration={0.5}/>
-        :
-        <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image: imageSrc, bannerRGBA }} isDesktop={isDesktop}>
+        <PortfolioItemWrapper key={title} mobile={props.mobile} item={{ image: imageSrc, bannerRGBA, loading }} isDesktop={isDesktop}>
             <Banner item={{ image, bannerRGBA }} isDesktop={isDesktop}>
                 <h1 style={{textAlign: "center"}}>{title}</h1>
                 <div style={{display: 'flex', flexDirection: 'row'}}>{technologies.sort((a,b) => a.localeCompare(b)).map(technology => {

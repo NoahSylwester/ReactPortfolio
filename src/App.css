@@ -10,3 +10,11 @@
     width: 100%;
     position: fixed;
 }
+@keyframes fade-in-animation {
+     from {
+           opacity: 0;
+       }
+       to {
+           opacity: 1;
+       }
+}

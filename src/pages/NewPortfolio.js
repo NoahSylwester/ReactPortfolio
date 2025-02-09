@@ -75,19 +75,19 @@ export default function NewPortfolio(props) {
         query: '(min-width: 755px)'
       })
 
-    const handleArrowClick = (type) => {
-        switch (type) {
-            case 'back':
-                setIndex(index - 1 >= 0 ? index - 1 : matchedPortfolioItems.length - 1);
-                return;
-            case 'forward': 
-                setIndex(index + 1 <= matchedPortfolioItems.length - 1 ? index + 1 : 0);
-                return;
-            default:
-                setIndex(index);
-                return;
-        }
-    }
+    // const handleArrowClick = (type) => {
+    //     switch (type) {
+    //         case 'back':
+    //             setIndex(index - 1 >= 0 ? index - 1 : matchedPortfolioItems.length - 1);
+    //             return;
+    //         case 'forward': 
+    //             setIndex(index + 1 <= matchedPortfolioItems.length - 1 ? index + 1 : 0);
+    //             return;
+    //         default:
+    //             setIndex(index);
+    //             return;
+    //     }
+    // }
 
     const handleFilter = () => {
         if (filterQuery) {
@@ -131,7 +131,7 @@ export default function NewPortfolio(props) {
                     ?
                 <>
                     {/* {doneLoading ? <Arrow onClick={() => handleArrowClick('back')}><RiArrowLeftSLine/></Arrow> : <></>} */}
-                    <PortfolioItem indexer={{ index, setIndex, length: matchedPortfolioItems.length }} item={matchedPortfolioItems[index]} key={matchedPortfolioItems[index]} setDoneLoading={setDoneLoading}/>
+                    <PortfolioItem indexer={{ index, setIndex, length: matchedPortfolioItems.length }} item={matchedPortfolioItems[index]} key={matchedPortfolioItems[index].title} setDoneLoading={setDoneLoading}/>
                     {/* {doneLoading ? <Arrow onClick={() => handleArrowClick('forward')}><RiArrowRightSLine/></Arrow> : <></>} */}
                 </>
                     :

@@ -2,8 +2,6 @@ import React from 'react';
 
 export default function PrivacyPolicySegno(props) {
 
-    console.log(123)
-
     return (
 <div style={{ paddingLeft: 10, paddingRight: 10,overflow: 'auto', height: '100%' }} dangerouslySetInnerHTML={{ __html: `<style>
   [data-custom-class='body'], [data-custom-class='body'] * {
